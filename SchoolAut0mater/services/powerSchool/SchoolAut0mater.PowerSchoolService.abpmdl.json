@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SchoolAut0mater.PowerSchoolService.Domain.Shared": {
+      "path": "src/SchoolAut0mater.PowerSchoolService.Domain.Shared/SchoolAut0mater.PowerSchoolService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.PowerSchoolService.Application.Contracts": {
+      "path": "src/SchoolAut0mater.PowerSchoolService.Application.Contracts/SchoolAut0mater.PowerSchoolService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.PowerSchoolService.Domain": {
+      "path": "src/SchoolAut0mater.PowerSchoolService.Domain/SchoolAut0mater.PowerSchoolService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.PowerSchoolService.Application": {
+      "path": "src/SchoolAut0mater.PowerSchoolService.Application/SchoolAut0mater.PowerSchoolService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.PowerSchoolService.EntityFrameworkCore": {
+      "path": "src/SchoolAut0mater.PowerSchoolService.EntityFrameworkCore/SchoolAut0mater.PowerSchoolService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.PowerSchoolService.HttpApi": {
+      "path": "src/SchoolAut0mater.PowerSchoolService.HttpApi/SchoolAut0mater.PowerSchoolService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.PowerSchoolService.HttpApi.Client": {
+      "path": "src/SchoolAut0mater.PowerSchoolService.HttpApi.Client/SchoolAut0mater.PowerSchoolService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.PowerSchoolService.HttpApi.Host": {
+      "path": "src/SchoolAut0mater.PowerSchoolService.HttpApi.Host/SchoolAut0mater.PowerSchoolService.HttpApi.Host.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.PowerSchoolService.Domain.Tests": {
+      "path": "test/SchoolAut0mater.PowerSchoolService.Domain.Tests/SchoolAut0mater.PowerSchoolService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.PowerSchoolService.EntityFrameworkCore.Tests": {
+      "path": "test/SchoolAut0mater.PowerSchoolService.EntityFrameworkCore.Tests/SchoolAut0mater.PowerSchoolService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.PowerSchoolService.TestBase": {
+      "path": "test/SchoolAut0mater.PowerSchoolService.TestBase/SchoolAut0mater.PowerSchoolService.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.PowerSchoolService.Application.Tests": {
+      "path": "test/SchoolAut0mater.PowerSchoolService.Application.Tests/SchoolAut0mater.PowerSchoolService.Application.Tests.abppkg.json",
+      "folder": "test"
+    }
+  }
+}

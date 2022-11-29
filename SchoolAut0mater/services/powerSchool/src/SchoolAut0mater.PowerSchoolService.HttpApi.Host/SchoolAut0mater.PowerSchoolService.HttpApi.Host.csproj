@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>SchoolAut0mater.PowerSchoolService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>        
+        <ProjectReference Include="..\..\..\..\shared\SchoolAut0mater.Shared.Hosting.Microservices\SchoolAut0mater.Shared.Hosting.Microservices.csproj" />
+        <ProjectReference Include="..\SchoolAut0mater.PowerSchoolService.Application\SchoolAut0mater.PowerSchoolService.Application.csproj" />
+        <ProjectReference Include="..\SchoolAut0mater.PowerSchoolService.EntityFrameworkCore\SchoolAut0mater.PowerSchoolService.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\SchoolAut0mater.PowerSchoolService.HttpApi\SchoolAut0mater.PowerSchoolService.HttpApi.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Logs\**" />
+        <Content Remove="Logs\**" />
+        <EmbeddedResource Remove="Logs\**" />
+        <None Remove="Logs\**" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>SchoolAut0mater.PowerSchoolService</RootNamespace>
+    <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Commercial.SuiteTemplates" Version="7.0.0-rc.2" />
+    <PackageReference Include="Volo.Abp.Validation" Version="7.0.0-rc.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\PowerSchoolService\*.json" />
+    <Content Remove="Localization\PowerSchoolService\*.json" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>SchoolAut0mater.PowerSchoolService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SchoolAut0mater.PowerSchoolService.Application\SchoolAut0mater.PowerSchoolService.Application.csproj" />
+    <ProjectReference Include="..\SchoolAut0mater.PowerSchoolService.Domain.Tests\SchoolAut0mater.PowerSchoolService.Domain.Tests.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
+  </ItemGroup>
+
+</Project>
