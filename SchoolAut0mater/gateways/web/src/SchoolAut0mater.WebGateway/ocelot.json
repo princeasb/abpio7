@@ -186,6 +186,19 @@
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
+      "ServiceKey": "Core Service",
+      "DownstreamPathTemplate": "/api/core-service/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 45021
+        }
+      ],
+      "UpstreamPathTemplate": "/api/core-service/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
       "ServiceKey": "Product Service",
       "DownstreamPathTemplate": "/api/product-service/{everything}",
       "DownstreamScheme": "https",

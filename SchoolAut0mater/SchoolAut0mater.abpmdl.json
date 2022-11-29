@@ -75,6 +75,10 @@
       "path": "services/identity/src/SchoolAut0mater.IdentityService.HttpApi.Host/SchoolAut0mater.IdentityService.HttpApi.Host.abppkg.json",
       "folder": "services/identity/src"
     },
+    "SchoolAut0mater.CoreService.HttpApi.Host": {
+      "path": "services/core/src/SchoolAut0mater.CoreService.HttpApi.Host/SchoolAut0mater.CoreService.HttpApi.Host.abppkg.json",
+      "folder": "services/core/src"
+    },
     "SchoolAut0mater.ProductService.HttpApi.Host": {
       "path": "services/product/src/SchoolAut0mater.ProductService.HttpApi.Host/SchoolAut0mater.ProductService.HttpApi.Host.abppkg.json",
       "folder": "services/product/src"

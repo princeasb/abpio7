@@ -25,6 +25,8 @@ spec:
           value: "{{ .Values.config.selfUrl }}"
         - name: App__CorsOrigins
           value: "{{ .Values.config.corsOrigins }}"
+        - name: "ConnectionStrings__CoreService"
+          value: "{{ .Values.config.connectionStrings.coreService }}"
         - name: "ConnectionStrings__ProductService"
           value: "{{ .Values.config.connectionStrings.productService }}"
         - name: "ConnectionStrings__AdministrationService"

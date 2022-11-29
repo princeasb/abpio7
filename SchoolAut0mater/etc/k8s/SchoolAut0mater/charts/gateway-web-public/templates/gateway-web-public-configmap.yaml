@@ -49,6 +49,24 @@ data:
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
+      "ServiceKey": "Core Service",
+      "DownstreamPathTemplate": "/api/core-service/{everything}",
+      "DownstreamScheme": "{{ .Values.reRoutes.coreService.host }}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "{{ .Values.reRoutes.coreService.host }}",
+          "Port": {{ .Values.reRoutes.coreService.port }}
+        }
+      ],
+      "UpstreamPathTemplate": "/api/core-service/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 2,
+        "DurationOfBreak": 2000,
+        "TimeoutValue": 5000
+      }
+    },
+    {
       "ServiceKey": "Product Service",
       "DownstreamPathTemplate": "/api/product-service/{everything}",
       "DownstreamScheme": "{{ .Values.reRoutes.productService.host }}",

@@ -11,6 +11,7 @@ $publicWebFolder = Join-Path $slnFolder "apps/public-web/src/SchoolAut0mater.Pub
 $identityServiceFolder = Join-Path $slnFolder "services/identity/src/SchoolAut0mater.IdentityService.HttpApi.Host"
 $administrationServiceFolder = Join-Path $slnFolder "services/administration/src/SchoolAut0mater.AdministrationService.HttpApi.Host"
 $saasServiceFolder = Join-Path $slnFolder "services/saas/src/SchoolAut0mater.SaasService.HttpApi.Host"
+$coreServiceFolder = Join-Path $slnFolder "services/core/src/SchoolAut0mater.CoreService.HttpApi.Host"
 $productServiceFolder = Join-Path $slnFolder "services/product/src/SchoolAut0mater.ProductService.HttpApi.Host"
 
 ### Gateway Folders
@@ -39,6 +40,11 @@ docker build -f "$administrationServiceFolder/Dockerfile" -t mycompanyname/schoo
 Write-Host "*** BUILDING SAAS-SERVICE ***" -ForegroundColor Green
 Set-Location $slnFolder
 docker build -f "$saasServiceFolder/Dockerfile" -t mycompanyname/schoolaut0mater-service-saas:$version .
+
+### CORE-SERVICE
+Write-Host "*** BUILDING CORE-SERVICE ***" -ForegroundColor Green
+Set-Location $slnFolder
+docker build -f "$coreServiceFolder/Dockerfile" -t mycompanyname/schoolaut0mater-service-core:$version .
 
 ### PRODUCT-SERVICE
 Write-Host "*** BUILDING PRODUCT-SERVICE ***" -ForegroundColor Green

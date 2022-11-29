@@ -24,6 +24,10 @@ reRoutes:
     schema: http
     host: schoolaut0mater-st-administration
     port: 80
+  coreService:
+    schema: http
+    host: schoolaut0mater-st-product
+    port: 80  
   productService:
     schema: http
     host: schoolaut0mater-st-product

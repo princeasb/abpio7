@@ -36,6 +36,7 @@ public class SchoolAut0materWebGatewayModule : AbpModule
                     { "IdentityService", "Identity Service API" },
                     { "AdministrationService", "Administration Service API" },
                     { "SaasService", "Saas Service API" },
+                    { "CoreService", "Core Service API" },
                     { "ProductService", "Product Service API" }
                 },
             apiTitle: "Web Gateway API"

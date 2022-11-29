@@ -360,16 +360,6 @@ MigrationBackup/
 /etc/prometheus/storage/*
 /etc/elasticsearch/data/*
 /etc/grafana/storage/*
-/src/applications/SchoolAut0mater.AuthServer/Logs/*
-/src/microservices/identity/SchoolAut0mater.IdentityService.HttpApi.Host/Logs/*
-/src/applications/SchoolAut0mater.Web/Logs/*
-/src/gateways/SchoolAut0mater.WebGateway/Logs/*
-/src/microservices/administration/SchoolAut0mater.AdministrationService.Host/Logs/*
-/src/gateways/SchoolAut0mater.InternalGateway/Logs/*
-/src/microservices/saas/SchoolAut0mater.SaasService/Logs/*
-/src/gateways/SchoolAut0mater.PublicWebGateway/Logs/*
-/src/applications/SchoolAut0mater.PublicWeb/Logs/*
-/src/microservices/product/SchoolAut0mater.ProductService.HttpApi.Host/Logs/*
 
 # Use abp install-libs to restore.
 **/wwwroot/libs/*

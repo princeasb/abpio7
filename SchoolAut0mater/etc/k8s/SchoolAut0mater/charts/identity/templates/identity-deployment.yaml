@@ -71,6 +71,8 @@ spec:
           value: {{ .Values.openIdDict.resources.identityServiceRootUrl }}
         - name: "OpenIddict__Resources__SaasService__RootUrl"
           value: {{ .Values.openIdDict.resources.saasServiceRootUrl }}
+        - name: "OpenIddict__Resources__CoreService__RootUrl"
+          value: {{ .Values.openIdDict.resources.coreServiceRootUrl }}
         - name: "OpenIddict__Resources__ProductService__RootUrl"
           value: {{ .Values.openIdDict.resources.productServiceRootUrl }}
           {{- if .Values.env }}

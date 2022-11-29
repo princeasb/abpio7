@@ -42,6 +42,11 @@ public class SchoolAut0materSharedHostingModule : AbpModule
                 database.MappedConnections.Add("OpenIddict");
             });
 
+            options.Databases.Configure("CoreService", database =>
+            {
+                database.MappedConnections.Add("CoreService");
+            });
+
             options.Databases.Configure("ProductService", database =>
             {
                 database.MappedConnections.Add("ProductService");

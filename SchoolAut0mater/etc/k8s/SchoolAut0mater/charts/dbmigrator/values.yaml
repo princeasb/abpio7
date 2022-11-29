@@ -3,6 +3,7 @@ config:
     identityService: #
     administrationService: #
     saasService: #
+    coreService: #
     productService: #
   dotnetEnv: Staging
 
@@ -22,6 +23,7 @@ openIdDict:
     administrationServiceRootUrl: #
     identityServiceRootUrl: #
     saasServiceRootUrl: #
+    coreServiceRootUrl: #
     productServiceRootUrl: #
 
 image:

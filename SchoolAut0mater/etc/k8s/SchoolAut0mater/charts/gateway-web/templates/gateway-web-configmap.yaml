@@ -178,6 +178,19 @@ data:
       "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
     },
     {
+      "ServiceKey": "Core Service",
+      "DownstreamPathTemplate": "/api/core-service/{everything}",
+      "DownstreamScheme": "{{ .Values.reRoutes.coreService.schema }}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "{{ .Values.reRoutes.coreService.host }}",
+          "Port": "{{ .Values.reRoutes.coreService.port }}",
+        }
+      ],
+      "UpstreamPathTemplate": "/api/core-service/{everything}",
+      "UpstreamHttpMethod": [ "Put", "Delete", "Get", "Post" ]
+    },
+    {
       "ServiceKey": "Product Service",
       "DownstreamPathTemplate": "/api/product-service/{everything}",
       "DownstreamScheme": "{{ .Values.reRoutes.productService.schema }}",

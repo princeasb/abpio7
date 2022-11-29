@@ -2,6 +2,7 @@ config:
   selfUrl: # https://schoolaut0mater-st-product
   corsOrigins: #
   connectionStrings:
+    coreService: #
     productService: #
     administrationService: #
     saasService: #

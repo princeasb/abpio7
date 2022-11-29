@@ -31,6 +31,7 @@ public class SchoolAut0materPublicWebGatewayModule : AbpModule
             scopes: new Dictionary<string, string> /* Requested scopes for authorization code request and descriptions for swagger UI only */ {
                     { "AccountService", "Account Service API" },
                     { "AdministrationService", "Administration Service API" },
+                    // { "CoreService", "Core Service API" },
                     { "ProductService", "Product Service API" }
                 },
             apiTitle: "Public Web Gateway API"

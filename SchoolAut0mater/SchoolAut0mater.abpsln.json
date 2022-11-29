@@ -42,6 +42,10 @@
       "path": "services/identity/SchoolAut0mater.IdentityService.abpmdl.json",
       "folder": "services"
     },
+    "SchoolAut0mater.CoreService": {
+      "path": "services/core/SchoolAut0mater.CoreService.abpmdl.json",
+      "folder": "services"
+    },
     "SchoolAut0mater.ProductService": {
       "path": "services/product/SchoolAut0mater.ProductService.abpmdl.json",
       "folder": "services"

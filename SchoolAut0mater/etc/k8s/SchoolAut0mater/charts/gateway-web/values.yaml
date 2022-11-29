@@ -28,9 +28,13 @@ reRoutes:
     schema: # http
     host: # schoolaut0mater-st-saas
     port: # 80
+  coreService:
+    schema: # http
+    host: # schoolaut0mater-st-core
+    port: # 80  
   productService:
     schema: # http
-    host: # schoolaut0mater-st-saas
+    host: # schoolaut0mater-st-product
     port: # 80  
 ingress:
   host: # schoolaut0mater-st-gateway-web
