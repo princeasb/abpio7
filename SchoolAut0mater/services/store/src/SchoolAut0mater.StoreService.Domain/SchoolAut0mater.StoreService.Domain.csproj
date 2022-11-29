@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>SchoolAut0mater.StoreService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Ddd.Domain" Version="7.0.0-rc.2" />
+    <ProjectReference Include="..\SchoolAut0mater.StoreService.Domain.Shared\SchoolAut0mater.StoreService.Domain.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
