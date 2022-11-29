@@ -6,6 +6,8 @@ using SchoolAut0mater.CoreService;
 using SchoolAut0mater.CoreService.EntityFrameworkCore;
 using SchoolAut0mater.StaffService;
 using SchoolAut0mater.StaffService.EntityFrameworkCore;
+using SchoolAut0mater.StoreService;
+using SchoolAut0mater.StoreService.EntityFrameworkCore;
 using SchoolAut0mater.ProductService;
 using SchoolAut0mater.ProductService.EntityFrameworkCore;
 using SchoolAut0mater.SaasService;
@@ -27,6 +29,8 @@ namespace SchoolAut0mater.DbMigrator;
     typeof(CoreServiceEntityFrameworkCoreModule),
     typeof(StaffServiceApplicationContractsModule),
     typeof(StaffServiceEntityFrameworkCoreModule),
+    typeof(StoreServiceApplicationContractsModule),
+    typeof(StoreServiceEntityFrameworkCoreModule),
     typeof(ProductServiceApplicationContractsModule),
     typeof(ProductServiceEntityFrameworkCoreModule)
 )]

@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolAut0mater.CoreService
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolAut0mater.StaffService.HttpApi.Host", "services\staff\src\SchoolAut0mater.StaffService.HttpApi.Host\SchoolAut0mater.StaffService.HttpApi.Host.csproj", "{1A1C647D-C642-4031-8425-233B8E1702B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolAut0mater.StoreService.HttpApi.Host", "services\store\src\SchoolAut0mater.StoreService.HttpApi.Host\SchoolAut0mater.StoreService.HttpApi.Host.csproj", "{17C51B2A-84FD-4FD1-9779-F52E62AAAD0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,7 @@ Global
 		{155290BF-E0C9-45BC-AF12-F1213971A77A} = {AA0E8A96-C8F7-4583-B563-1AB39BA1136B}
 		{9812E8FA-56EC-410A-8444-61674827D73C} = {73703BAF-1525-4A5F-A39D-613EF545FDD7}
 		{1A1C647D-C642-4031-8425-233B8E1702B0} = {73703BAF-1525-4A5F-A39D-613EF545FDD7}
+		{17C51B2A-84FD-4FD1-9779-F52E62AAAD0B} = {73703BAF-1525-4A5F-A39D-613EF545FDD7}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{28C76D60-5196-4840-AE3B-5F853C723588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -129,5 +132,9 @@ Global
 		{1A1C647D-C642-4031-8425-233B8E1702B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A1C647D-C642-4031-8425-233B8E1702B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A1C647D-C642-4031-8425-233B8E1702B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17C51B2A-84FD-4FD1-9779-F52E62AAAD0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C51B2A-84FD-4FD1-9779-F52E62AAAD0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C51B2A-84FD-4FD1-9779-F52E62AAAD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C51B2A-84FD-4FD1-9779-F52E62AAAD0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

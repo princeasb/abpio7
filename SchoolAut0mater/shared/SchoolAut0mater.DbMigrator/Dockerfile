@@ -32,6 +32,7 @@ COPY "services/identity/src/SchoolAut0mater.IdentityService.HttpApi.Host/SchoolA
 COPY "services/saas/src/SchoolAut0mater.SaasService.HttpApi.Host/SchoolAut0mater.SaasService.HttpApi.Host.csproj" "services/saas/src/SchoolAut0mater.SaasService.HttpApi.Host/SchoolAut0mater.SaasService.HttpApi.Host.csproj"
 COPY "services/core/src/SchoolAut0mater.CoreService.HttpApi.Host/SchoolAut0mater.CoreService.HttpApi.Host.csproj" "services/product/src/SchoolAut0mater.CoreService.HttpApi.Host/SchoolAut0mater.CoreService.HttpApi.Host.csproj"
 COPY "services/core/src/SchoolAut0mater.StaffService.HttpApi.Host/SchoolAut0mater.StaffService.HttpApi.Host.csproj" "services/product/src/SchoolAut0mater.StaffService.HttpApi.Host/SchoolAut0mater.StaffService.HttpApi.Host.csproj"
+COPY "services/core/src/SchoolAut0mater.StoreService.HttpApi.Host/SchoolAut0mater.StoreService.HttpApi.Host.csproj" "services/product/src/SchoolAut0mater.StoreService.HttpApi.Host/SchoolAut0mater.StoreService.HttpApi.Host.csproj"
 COPY "services/product/src/SchoolAut0mater.ProductService.HttpApi.Host/SchoolAut0mater.ProductService.HttpApi.Host.csproj" "services/product/src/SchoolAut0mater.ProductService.HttpApi.Host/SchoolAut0mater.ProductService.HttpApi.Host.csproj"
 # Gateways
 COPY "gateways/web/src/SchoolAut0mater.WebGateway/SchoolAut0mater.WebGateway.csproj" "gateways/web/src/SchoolAut0mater.WebGateway/SchoolAut0mater.WebGateway.csproj"
