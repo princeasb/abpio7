@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SchoolAut0mater.StaffService.Domain.Shared": {
+      "path": "src/SchoolAut0mater.StaffService.Domain.Shared/SchoolAut0mater.StaffService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.StaffService.Application.Contracts": {
+      "path": "src/SchoolAut0mater.StaffService.Application.Contracts/SchoolAut0mater.StaffService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.StaffService.Domain": {
+      "path": "src/SchoolAut0mater.StaffService.Domain/SchoolAut0mater.StaffService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.StaffService.Application": {
+      "path": "src/SchoolAut0mater.StaffService.Application/SchoolAut0mater.StaffService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.StaffService.EntityFrameworkCore": {
+      "path": "src/SchoolAut0mater.StaffService.EntityFrameworkCore/SchoolAut0mater.StaffService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.StaffService.HttpApi": {
+      "path": "src/SchoolAut0mater.StaffService.HttpApi/SchoolAut0mater.StaffService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.StaffService.HttpApi.Client": {
+      "path": "src/SchoolAut0mater.StaffService.HttpApi.Client/SchoolAut0mater.StaffService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.StaffService.HttpApi.Host": {
+      "path": "src/SchoolAut0mater.StaffService.HttpApi.Host/SchoolAut0mater.StaffService.HttpApi.Host.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.StaffService.Domain.Tests": {
+      "path": "test/SchoolAut0mater.StaffService.Domain.Tests/SchoolAut0mater.StaffService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.StaffService.EntityFrameworkCore.Tests": {
+      "path": "test/SchoolAut0mater.StaffService.EntityFrameworkCore.Tests/SchoolAut0mater.StaffService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.StaffService.TestBase": {
+      "path": "test/SchoolAut0mater.StaffService.TestBase/SchoolAut0mater.StaffService.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.StaffService.Application.Tests": {
+      "path": "test/SchoolAut0mater.StaffService.Application.Tests/SchoolAut0mater.StaffService.Application.Tests.abppkg.json",
+      "folder": "test"
+    }
+  }
+}

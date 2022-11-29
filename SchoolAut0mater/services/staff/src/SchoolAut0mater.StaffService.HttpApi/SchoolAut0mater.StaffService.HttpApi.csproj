@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <RootNamespace>SchoolAut0mater.StaffService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="7.0.0-rc.2" />
+    <ProjectReference Include="..\SchoolAut0mater.StaffService.Application.Contracts\SchoolAut0mater.StaffService.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
