@@ -24,6 +24,8 @@
         <ProjectReference Include="..\..\services\staff\src\SchoolAut0mater.StaffService.EntityFrameworkCore\SchoolAut0mater.StaffService.EntityFrameworkCore.csproj" />
         <ProjectReference Include="..\..\services\store\src\SchoolAut0mater.StoreService.Application.Contracts\SchoolAut0mater.StoreService.Application.Contracts.csproj" />
         <ProjectReference Include="..\..\services\store\src\SchoolAut0mater.StoreService.EntityFrameworkCore\SchoolAut0mater.StoreService.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\services\powerSchool\src\SchoolAut0mater.PowerSchoolService.Application.Contracts\SchoolAut0mater.PowerSchoolService.Application.Contracts.csproj" />
+        <ProjectReference Include="..\..\services\powerSchool\src\SchoolAut0mater.PowerSchoolService.EntityFrameworkCore\SchoolAut0mater.PowerSchoolService.EntityFrameworkCore.csproj" />
         <ProjectReference Include="..\..\services\product\src\SchoolAut0mater.ProductService.Application.Contracts\SchoolAut0mater.ProductService.Application.Contracts.csproj" />
         <ProjectReference Include="..\..\services\product\src\SchoolAut0mater.ProductService.EntityFrameworkCore\SchoolAut0mater.ProductService.EntityFrameworkCore.csproj" />
     </ItemGroup>

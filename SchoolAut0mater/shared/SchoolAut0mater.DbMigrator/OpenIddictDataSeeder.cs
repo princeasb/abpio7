@@ -66,12 +66,13 @@ public class OpenIddictDataSeeder : ITransientDependency
         await CreateScopesAsync("CoreService");
         await CreateScopesAsync("StaffService");
         await CreateScopesAsync("StoreService");
+        await CreateScopesAsync("PowerSchoolService");
         await CreateScopesAsync("ProductService");
     }
 
     private async Task CreateWebGatewaySwaggerClientsAsync()
     {
-        await CreateSwaggerClientAsync("WebGateway", new[] { "AccountService", "IdentityService", "AdministrationService", "SaasService", "CoreService", "StaffService", "StoreService", "ProductService" });
+        await CreateSwaggerClientAsync("WebGateway", new[] { "AccountService", "IdentityService", "AdministrationService", "SaasService", "CoreService", "StaffService", "StoreService", "PowerSchoolService", "ProductService" });
     }
 
     private async Task CreateSwaggerClientAsync(string name, string[] scopes = null)
@@ -100,6 +101,7 @@ public class OpenIddictDataSeeder : ITransientDependency
             var coreServiceRootUrl = _configuration[$"OpenIddict:Resources:CoreService:RootUrl"].TrimEnd('/');
             var staffServiceRootUrl = _configuration[$"OpenIddict:Resources:StaffService:RootUrl"].TrimEnd('/');
             var storeServiceRootUrl = _configuration[$"OpenIddict:Resources:StoreService:RootUrl"].TrimEnd('/');
+            var powerSchoolServiceRootUrl = _configuration[$"OpenIddict:Resources:PowerSchoolService:RootUrl"].TrimEnd('/');
             var productServiceRootUrl = _configuration[$"OpenIddict:Resources:ProductService:RootUrl"].TrimEnd('/');
 
             await CreateApplicationAsync(
@@ -122,7 +124,8 @@ public class OpenIddictDataSeeder : ITransientDependency
                     $"{saasServiceRootUrl}/swagger/oauth2-redirect.html", // SaasService redirect uri
                     $"{coreServiceRootUrl}/swagger/oauth2-redirect.html", // CoreService redirect uri
                     $"{staffServiceRootUrl}/swagger/oauth2-redirect.html", // StaffService redirect uri
-                    $"{storeServiceRootUrl}/swagger/oauth2-redirect.html", // StoreService redirect uri                    
+                    $"{storeServiceRootUrl}/swagger/oauth2-redirect.html", // StoreService redirect uri
+                    $"{powerSchoolServiceRootUrl}/swagger/oauth2-redirect.html", // PowerSchoolService redirect uri                  
                     $"{productServiceRootUrl}/swagger/oauth2-redirect.html", // ProductService redirect uri
                 }
             );
@@ -169,7 +172,7 @@ public class OpenIddictDataSeeder : ITransientDependency
                 OpenIddictConstants.GrantTypes.AuthorizationCode,
                 OpenIddictConstants.GrantTypes.Implicit
             },
-            scopes: commonScopes.Union(new[] {"AccountService", "IdentityService", "AdministrationService", "SaasService", "CoreService", "StaffService", "StoreService", "ProductService"}).ToList(),
+            scopes: commonScopes.Union(new[] {"AccountService", "IdentityService", "AdministrationService", "SaasService", "CoreService", "StaffService", "StoreService", "PowerSchoolService", "ProductService"}).ToList(),
             redirectUris: new List<string> { $"{webClientRootUrl}signin-oidc" },
             postLogoutRedirectUris: new List<string>() { $"{webClientRootUrl}signout-callback-oidc" }
         );
@@ -186,7 +189,7 @@ public class OpenIddictDataSeeder : ITransientDependency
             {
                 OpenIddictConstants.GrantTypes.AuthorizationCode
             },
-            scopes: commonScopes.Union(new[] {"AccountService", "IdentityService", "AdministrationService", "SaasService", "CoreService", "StaffService", "StoreService", "ProductService"}).ToList(),
+            scopes: commonScopes.Union(new[] {"AccountService", "IdentityService", "AdministrationService", "SaasService", "CoreService", "StaffService", "StoreService", "PowerSchoolService", "ProductService"}).ToList(),
             redirectUris: new List<string> { $"{blazorClientRootUrl}authentication/login-callback" },
             postLogoutRedirectUris: new List<string> { $"{blazorClientRootUrl}authentication/logout-callback" }
         );
@@ -204,7 +207,7 @@ public class OpenIddictDataSeeder : ITransientDependency
                 OpenIddictConstants.GrantTypes.AuthorizationCode,
                 OpenIddictConstants.GrantTypes.Implicit
             },
-            scopes: commonScopes.Union(new[] {"AccountService", "IdentityService", "AdministrationService", "SaasService", "CoreService", "StaffService", "StoreService", "ProductService" }).ToList(),
+            scopes: commonScopes.Union(new[] {"AccountService", "IdentityService", "AdministrationService", "SaasService", "CoreService", "StaffService", "StoreService", "PowerSchoolService", "ProductService" }).ToList(),
             redirectUris: new List<string> { $"{blazorServerClientRootUrl}signin-oidc" },
             postLogoutRedirectUris: new List<string> { $"{blazorServerClientRootUrl}signout-callback-oidc" }
         );
@@ -222,7 +225,7 @@ public class OpenIddictDataSeeder : ITransientDependency
                 OpenIddictConstants.GrantTypes.AuthorizationCode,
                 OpenIddictConstants.GrantTypes.Implicit
             },
-            scopes: commonScopes.Union(new[] { "AccountService", "AdministrationService", "CoreService", "StaffService", "StoreService", "ProductService" }).ToList(),
+            scopes: commonScopes.Union(new[] { "AccountService", "AdministrationService", "CoreService", "StaffService", "StoreService", "PowerSchoolService", "ProductService" }).ToList(),
             redirectUris: new List<string> { $"{publicWebClientRootUrl}signin-oidc" },
             postLogoutRedirectUris: new List<string> { $"{publicWebClientRootUrl}signout-callback-oidc" }
         );
@@ -243,7 +246,7 @@ public class OpenIddictDataSeeder : ITransientDependency
                 "LinkLogin",
                 "Impersonation"
             },
-            scopes: commonScopes.Union(new[] {"AccountService", "IdentityService", "AdministrationService", "SaasService", "CoreService", "StaffService", "StoreService", "ProductService" }).ToList(),
+            scopes: commonScopes.Union(new[] {"AccountService", "IdentityService", "AdministrationService", "SaasService", "CoreService", "StaffService", "StoreService", "PowerSchoolService", "ProductService" }).ToList(),
             redirectUris: new List<string> { $"{angularClientRootUrl}" },
             postLogoutRedirectUris: new List<string> { $"{angularClientRootUrl}" }
         );

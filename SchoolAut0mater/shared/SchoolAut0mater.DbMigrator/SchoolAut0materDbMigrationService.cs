@@ -11,6 +11,7 @@ using SchoolAut0mater.IdentityService.EntityFrameworkCore;
 using SchoolAut0mater.CoreService.EntityFrameworkCore;
 using SchoolAut0mater.StaffService.EntityFrameworkCore;
 using SchoolAut0mater.StoreService.EntityFrameworkCore;
+using SchoolAut0mater.PowerSchoolService.EntityFrameworkCore;
 using SchoolAut0mater.ProductService.EntityFrameworkCore;
 using SchoolAut0mater.SaasService.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -104,6 +105,7 @@ public class SchoolAut0materDbMigrationService : ITransientDependency
             await MigrateDatabaseAsync<CoreServiceDbContext>(cancellationToken);
             await MigrateDatabaseAsync<StaffServiceDbContext>(cancellationToken);
             await MigrateDatabaseAsync<StoreServiceDbContext>(cancellationToken);
+            await MigrateDatabaseAsync<PowerSchoolServiceDbContext>(cancellationToken);
             await MigrateDatabaseAsync<ProductServiceDbContext>(cancellationToken);
 
             await uow.CompleteAsync(cancellationToken);
