@@ -40,32 +40,43 @@ else { Write-Host 'cancelled'; return; }
 
 
 $connectionString = "Server=localhost,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Core;MultipleActiveResultSets=true;TrustServerCertificate=True"
-if (Test-Path -PathType Container "$newServiceLocation") { Write-Error 'MicroService already exist!!!' -ErrorAction Stop; }
-else { abp new $newServiceName -t microservice-service-pro --connection-string $connectionString --preview }
+# if (Test-Path -PathType Container "$newServiceLocation") { Write-Error 'MicroService already exist!!!' -ErrorAction Stop; }
+# # else { abp new $newServiceName -t microservice-service-pro --connection-string $connectionString --preview }
+# else { abp new $newServiceName -t microservice-service-pro --preview }
+if ( -Not (Test-Path -PathType Container "$newServiceLocation") ) { abp new $newServiceName -t microservice-service-pro --preview; }
 
 $projectFolder | Join-Path -ChildPath $newServiceLocation | Set-Location
 Write-Host "Initial Building of $newServiceName service"; Start-Sleep -Seconds 3;
-dotnet build
+dotnet build;
 
-# . "$($PSScriptRoot | Join-Path -ChildPath "modify-solution-for-new-proj.ps1")" $newServiceLocation
 Set-Location $projectFolder
 dotnet sln add "$($projectFolder | Join-Path -ChildPath $newServiceLocation)\src\SchoolAut0mater.$newServiceName.HttpApi.Host\SchoolAut0mater.$newServiceName.HttpApi.Host.csproj" --solution-folder services 
 
-# $administrationServiceHost = "$((Get-ChildItem -LP "$($projectFolder | Join-Path -ChildPath "services" | Join-Path -ChildPath "administration" | Join-Path -ChildPath "src")" -Filter *.AdministrationService.HttpApi.Host.csproj -Recurse).FullName)"
-# $contract = "$((Get-ChildItem -LP $newServiceLocation -Filter *.Application.Contracts.csproj -Recurse).FullName)"
-# if ($administrationServiceHost -ne $null -and $contract -ne $null) { dotnet add $administrationServiceHost reference $contract }
-# $administrationServiceHost = $null; $contract = $null;
-
-# $gateway = "$((Get-ChildItem -Filter *.WebGateway.csproj -Recurse).FullName)"
-# $httpApi = "$((Get-ChildItem -LP "$newServiceLocation" -Filter "*$newServiceName.HttpApi.csproj" -Recurse).FullName)"
-# if ($gateway -ne $null -and $httpApi -ne $null) { dotnet add $gateway reference $httpApi }
-# $gateway = $null; $httpApi = $null;
-
+Set-Location $projectFolder
 $DbMigrator = "$((Get-ChildItem -Filter *.DbMigrator.csproj -Recurse).FullName)"
 $Contracts = "$((Get-ChildItem -Path "$newServiceLocation" -Filter "*$newServiceName.Application.Contracts.csproj" -Recurse).FullName)"
 $EntityFrameworkCore = "$((Get-ChildItem -Path "$newServiceLocation" -Filter "*$newServiceName.EntityFrameworkCore.csproj" -Recurse).FullName)"
 if ($DbMigrator -ne $null -and $Contracts -ne $null) { dotnet add $DbMigrator reference $Contracts }
 if ($DbMigrator -ne $null -and $EntityFrameworkCore -ne $null) { dotnet add $DbMigrator reference $EntityFrameworkCore }
 $DbMigrator = $null; $Contracts = $null; $EntityFrameworkCore = $null;
+
+########################
+Set-Location $PSScriptRoot; return;
+########################
+
+# . "$($PSScriptRoot | Join-Path -ChildPath "modify-solution-for-new-proj.ps1")" $newServiceLocation
+
+# Set-Location $projectFolder
+# $administrationServiceHost = "$((Get-ChildItem -LP "$($projectFolder | Join-Path -ChildPath "services" | Join-Path -ChildPath "administration" | Join-Path -ChildPath "src")" -Filter *.AdministrationService.HttpApi.Host.csproj -Recurse).FullName)"
+# $contract = "$((Get-ChildItem -LP $newServiceLocation -Filter *.Application.Contracts.csproj -Recurse).FullName)"
+# if ($administrationServiceHost -ne $null -and $contract -ne $null) { dotnet add $administrationServiceHost reference $contract }
+# $administrationServiceHost = $null; $contract = $null;
+
+# Set-Location $projectFolder
+# $gateway = "$((Get-ChildItem -Filter *.WebGateway.csproj -Recurse).FullName)"
+# $httpApi = "$((Get-ChildItem -LP "$newServiceLocation" -Filter "*$newServiceName.HttpApi.csproj" -Recurse).FullName)"
+# if ($gateway -ne $null -and $httpApi -ne $null) { dotnet add $gateway reference $httpApi }
+# $gateway = $null; $httpApi = $null;
+
 
 Set-Location $projectFolder; return;
