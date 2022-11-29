@@ -8,7 +8,7 @@ namespace SchoolAut0mater.CoreService;
     typeof(CoreServiceDomainSharedModule),
     typeof(AbpDddApplicationContractsModule),
     typeof(AbpAuthorizationModule)
-    )]
+)]
 public class CoreServiceApplicationContractsModule : AbpModule
 {
 

@@ -17,5 +17,11 @@ public static class CoreServiceDbContextModelCreatingExtensions
         //    b.ConfigureByConvention(); //auto configure for the base class props
         //    //...
         //});
+
+        if (builder.IsHostDatabase())
+        {
+            builder.ApplyConfiguration(new EntityTypeConfigurations.MITs.MITCatalogConfigurations());
+            //builder.Ignore<MITs.MITCatalog>();
+        }
     }
 }

@@ -10,4 +10,12 @@ public class CoreServicePermissions
     {
         return ReflectionHelper.GetPublicConstantsRecursively(typeof(CoreServicePermissions));
     }
+
+    public static class MITCatalogs
+    {
+        public const string Default = GroupName + ".MITCatalogs";
+        public const string Edit = Default + ".Edit";
+        public const string Create = Default + ".Create";
+        public const string Delete = Default + ".Delete";
+    }
 }

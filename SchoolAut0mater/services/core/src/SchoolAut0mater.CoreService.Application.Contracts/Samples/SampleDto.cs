@@ -1,6 +1,6 @@
-﻿namespace SchoolAut0mater.CoreService.Samples;
+﻿//namespace SchoolAut0mater.CoreService.Samples;
 
-public class SampleDto
-{
-    public int Value { get; set; }
-}
+//public class SampleDto
+//{
+//    public int Value { get; set; }
+//}

@@ -1,3 +1,4 @@
+using SchoolAut0mater.CoreService.MITs;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.SqlServer;
@@ -21,9 +22,11 @@ public class CoreServiceEntityFrameworkCoreModule : AbpModule
     {
         context.Services.AddAbpDbContext<CoreServiceDbContext>(options =>
         {
-                /* Remove "includeAllEntities: true" to create
-                 * default repositories only for aggregate roots */
+            /* Remove "includeAllEntities: true" to create
+             * default repositories only for aggregate roots */
             options.AddDefaultRepositories(includeAllEntities: true);
+            options.AddRepository<MITCatalog, MITs.EfCoreMITCatalogRepository>();
+
         });
 
         Configure<AbpDbContextOptions>(options =>

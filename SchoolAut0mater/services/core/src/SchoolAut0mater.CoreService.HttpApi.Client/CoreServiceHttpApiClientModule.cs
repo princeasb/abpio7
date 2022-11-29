@@ -7,13 +7,16 @@ namespace SchoolAut0mater.CoreService;
 
 [DependsOn(
     typeof(CoreServiceApplicationContractsModule),
-    typeof(AbpHttpClientModule))]
+    typeof(AbpHttpClientModule)
+)]
 public class CoreServiceHttpApiClientModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        context.Services.AddHttpClientProxies(typeof(CoreServiceApplicationContractsModule).Assembly,
-            CoreServiceRemoteServiceConsts.RemoteServiceName);
+        context.Services.AddHttpClientProxies(
+            typeof(CoreServiceApplicationContractsModule).Assembly,
+            CoreServiceRemoteServiceConsts.RemoteServiceName
+        );
 
         Configure<AbpVirtualFileSystemOptions>(options =>
         {
