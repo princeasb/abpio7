@@ -1,0 +1,42 @@
+config:
+  selfUrl: # https://schoolaut0mater-st-gateway-public-web
+  globalConfigurationBaseUrl: # http://schoolaut0mater-st-gateway-public-web
+  corsOrigins: # https://schoolaut0mater-st-gateway-web,https://schoolaut0mater-st-gateway-public-web
+  authServer:
+    authority: # http://schoolaut0mater-st-authserver
+    requireHttpsMetadata: # "false"
+    swaggerClientId: # WebGateway_Swagger
+  dotnetEnv: Staging 
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+
+reRoutes:
+  accountService:
+    schema: http
+    host: schoolaut0mater-st-authserver
+    port: 80
+  saasService:
+    schema: http
+    host: schoolaut0mater-st-saas
+    port: 80
+  administrationService:
+    schema: http
+    host: schoolaut0mater-st-administration
+    port: 80
+  productService:
+    schema: http
+    host: schoolaut0mater-st-product
+    port: 80  
+
+ingress:
+  host: schoolaut0mater-st-gateway-web-public
+  tlsSecret: schoolaut0mater-tls
+
+image:
+  repository: mycompanyname/schoolaut0mater-gateway-web-public
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}
+    

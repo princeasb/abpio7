@@ -1,0 +1,62 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SchoolAut0mater.ProductService.Domain.Shared": {
+      "path": "src/SchoolAut0mater.ProductService.Domain.Shared/SchoolAut0mater.ProductService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.ProductService.Domain": {
+      "path": "src/SchoolAut0mater.ProductService.Domain/SchoolAut0mater.ProductService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.ProductService.Application.Contracts": {
+      "path": "src/SchoolAut0mater.ProductService.Application.Contracts/SchoolAut0mater.ProductService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.ProductService.Application": {
+      "path": "src/SchoolAut0mater.ProductService.Application/SchoolAut0mater.ProductService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.ProductService.EntityFrameworkCore": {
+      "path": "src/SchoolAut0mater.ProductService.EntityFrameworkCore/SchoolAut0mater.ProductService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.ProductService.HttpApi": {
+      "path": "src/SchoolAut0mater.ProductService.HttpApi/SchoolAut0mater.ProductService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.ProductService.HttpApi.Client": {
+      "path": "src/SchoolAut0mater.ProductService.HttpApi.Client/SchoolAut0mater.ProductService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.ProductService.HttpApi.Host": {
+      "path": "src/SchoolAut0mater.ProductService.HttpApi.Host/SchoolAut0mater.ProductService.HttpApi.Host.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.ProductService.Web": {
+      "path": "src/SchoolAut0mater.ProductService.Web/SchoolAut0mater.ProductService.Web.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.ProductService.Application.Tests": {
+      "path": "test/SchoolAut0mater.ProductService.Application.Tests/SchoolAut0mater.ProductService.Application.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.ProductService.Domain.Tests": {
+      "path": "test/SchoolAut0mater.ProductService.Domain.Tests/SchoolAut0mater.ProductService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.ProductService.EntityFrameworkCore.Tests": {
+      "path": "test/SchoolAut0mater.ProductService.EntityFrameworkCore.Tests/SchoolAut0mater.ProductService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.ProductService.TestBase": {
+      "path": "test/SchoolAut0mater.ProductService.TestBase/SchoolAut0mater.ProductService.TestBase.abppkg.json",
+      "folder": "test"
+    }
+  }
+}

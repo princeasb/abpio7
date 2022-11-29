@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>SchoolAut0mater.AdministrationService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.SettingManagement.Application" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.AuditLogging.Application" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.LanguageManagement.Application" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.TextTemplateManagement.Application" Version="7.0.0-rc.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SchoolAut0mater.AdministrationService.Application.Contracts\SchoolAut0mater.AdministrationService.Application.Contracts.csproj" />
+        <ProjectReference Include="..\SchoolAut0mater.AdministrationService.Domain\SchoolAut0mater.AdministrationService.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

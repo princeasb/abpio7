@@ -1,0 +1,9 @@
+{
+  "version": "0.1.0",
+  "name": "SchoolAut0materAuthServer",
+  "private": true,
+  "dependencies": {
+    "@volo/abp.aspnetcore.mvc.ui.theme.leptonx": "~2.0.0-rc.1",
+    "@volo/account": "^7.0.0-rc.2"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "folders": {
+    "items": {
+      "services": {
+        "items": {
+          "administration": {
+            "items": {
+              "src": {}
+            }
+          },
+          "identity": {
+            "items": {
+              "src": {}
+            }
+          },
+          "product": {
+            "items": {
+              "src": {}
+            }
+          },
+          "saas": {
+            "items": {
+              "src": {}
+            }
+          }
+        }
+      },
+      "gateways": {
+        "items": {
+          "web": {
+            "items": {
+              "src": {}
+            }
+          },
+          "web-public": {
+            "items": {
+              "src": {}
+            }
+          }
+        }
+      },
+      "apps": {
+        "items": {
+          "auth-server": {
+            "items": {
+              "src": {}
+            }
+          },
+          "blazor": {
+            "items": {
+              "src": {}
+            }
+          },
+          "public-web": {
+            "items": {
+              "src": {}
+            }
+          },
+          "web": {
+            "items": {
+              "src": {}
+            }
+          }
+        }
+      },
+      "shared": {}
+    }
+  },
+  "packages": {
+    "SchoolAut0mater.AdministrationService.HttpApi.Host": {
+      "path": "services/administration/src/SchoolAut0mater.AdministrationService.HttpApi.Host/SchoolAut0mater.AdministrationService.HttpApi.Host.abppkg.json",
+      "folder": "services/administration/src"
+    },
+    "SchoolAut0mater.IdentityService.HttpApi.Host": {
+      "path": "services/identity/src/SchoolAut0mater.IdentityService.HttpApi.Host/SchoolAut0mater.IdentityService.HttpApi.Host.abppkg.json",
+      "folder": "services/identity/src"
+    },
+    "SchoolAut0mater.ProductService.HttpApi.Host": {
+      "path": "services/product/src/SchoolAut0mater.ProductService.HttpApi.Host/SchoolAut0mater.ProductService.HttpApi.Host.abppkg.json",
+      "folder": "services/product/src"
+    },
+    "SchoolAut0mater.SaasService.HttpApi.Host": {
+      "path": "services/saas/src/SchoolAut0mater.SaasService.HttpApi.Host/SchoolAut0mater.SaasService.HttpApi.Host.abppkg.json",
+      "folder": "services/saas/src"
+    },
+    "SchoolAut0mater.WebGateway": {
+      "path": "gateways/web/src/SchoolAut0mater.WebGateway/SchoolAut0mater.WebGateway.abppkg.json",
+      "folder": "gateways/web/src"
+    },
+    "SchoolAut0mater.PublicWebGateway": {
+      "path": "gateways/web-public/src/SchoolAut0mater.PublicWebGateway/SchoolAut0mater.PublicWebGateway.abppkg.json",
+      "folder": "gateways/web-public/src"
+    },
+    "SchoolAut0mater.AuthServer": {
+      "path": "apps/auth-server/src/SchoolAut0mater.AuthServer/SchoolAut0mater.AuthServer.abppkg.json",
+      "folder": "apps/auth-server/src"
+    },
+    "SchoolAut0mater.PublicWeb": {
+      "path": "apps/public-web/src/SchoolAut0mater.PublicWeb/SchoolAut0mater.PublicWeb.abppkg.json",
+      "folder": "apps/public-web/src"
+    },
+    "SchoolAut0mater.DbMigrator": {
+      "path": "shared/SchoolAut0mater.DbMigrator/SchoolAut0mater.DbMigrator.abppkg.json",
+      "folder": "shared"
+    },
+    "SchoolAut0mater.Shared.Hosting.AspNetCore": {
+      "path": "shared/SchoolAut0mater.Shared.Hosting.AspNetCore/SchoolAut0mater.Shared.Hosting.AspNetCore.abppkg.json",
+      "folder": "shared"
+    },
+    "SchoolAut0mater.Shared.Hosting.Microservices": {
+      "path": "shared/SchoolAut0mater.Shared.Hosting.Microservices/SchoolAut0mater.Shared.Hosting.Microservices.abppkg.json",
+      "folder": "shared"
+    },
+    "SchoolAut0mater.Shared.Localization": {
+      "path": "shared/SchoolAut0mater.Shared.Localization/SchoolAut0mater.Shared.Localization.abppkg.json",
+      "folder": "shared"
+    },
+    "SchoolAut0mater.Shared.Hosting.Gateways": {
+      "path": "shared/SchoolAut0mater.Shared.Hosting.Gateways/SchoolAut0mater.Shared.Hosting.Gateways.abppkg.json",
+      "folder": "shared"
+    },
+    "SchoolAut0mater.Shared.Hosting": {
+      "path": "shared/SchoolAut0mater.Shared.Hosting/SchoolAut0mater.Shared.Hosting.abppkg.json",
+      "folder": "shared"
+    }
+  }
+}

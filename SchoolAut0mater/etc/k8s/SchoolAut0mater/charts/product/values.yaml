@@ -1,0 +1,27 @@
+config:
+  selfUrl: # https://schoolaut0mater-st-product
+  corsOrigins: #
+  connectionStrings:
+    productService: #
+    administrationService: #
+    saasService: #
+  authServer:
+    authority: # http://schoolaut0mater-st-authserver
+    requireHttpsMetadata: # "false"
+    swaggerClientId: WebGateway_Swagger
+  dotnetEnv: Staging
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+
+ingress:
+  host: schoolaut0mater-st-product
+  tlsSecret: schoolaut0mater-tls
+
+image:
+  repository: mycompanyname/schoolaut0mater-service-product
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}      

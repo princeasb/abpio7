@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>SchoolAut0mater.SaasService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Saas.Host.Application.Contracts" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Saas.Tenant.Application.Contracts" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Payment.Admin.Application.Contracts" Version="7.0.0-rc.2" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\SchoolAut0mater.SaasService.Domain.Shared\SchoolAut0mater.SaasService.Domain.Shared.csproj" />
+    </ItemGroup>
+
+</Project>

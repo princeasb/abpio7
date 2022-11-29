@@ -1,0 +1,13 @@
+{
+  "folders": {
+    "items": {
+      "src": {}
+    }
+  },
+  "packages": {
+    "SchoolAut0mater.PublicWeb": {
+      "path": "src/SchoolAut0mater.PublicWeb/SchoolAut0mater.PublicWeb.abppkg.json",
+      "folder": "src"
+    }
+  }
+}

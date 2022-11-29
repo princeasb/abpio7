@@ -1,0 +1,169 @@
+{
+  "folders": {
+    "src": {},
+    "test": {}
+  },
+  "packages": {
+    "SchoolAut0mater.ProductService.Domain.Shared": {
+      "type": "dotnet-project",
+      "path": "src/SchoolAut0mater.ProductService.Domain.Shared/SchoolAut0mater.ProductService.Domain.Shared.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.domain.shared": {}
+      }      
+    },
+    "SchoolAut0mater.ProductService.Domain": {
+      "type": "dotnet-project",
+      "path": "src/SchoolAut0mater.ProductService.Domain/SchoolAut0mater.ProductService.Domain.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.domain": {}
+      },
+      "contents": {
+        "aggregates": {
+          "SchoolAut0mater.ProductService.Products.Product": {
+            "keyType": "Guid",
+            "summary": "Represents a product.",
+            "collectionProperties": {},
+            "navigationProperties": {}
+          } 
+        },
+        "repositoryInterfaces": {
+          "SchoolAut0mater.ProductService.Products.IProductRepository": {
+            "entity": {
+              "type": "SchoolAut0mater.ProductService.Products.Product",
+              "package": "SchoolAut0mater.ProductService.Domain"
+            }
+          }
+        }
+      }
+    },
+    "SchoolAut0mater.ProductService.Application.Contracts": {
+      "type": "dotnet-project",
+      "path": "src/SchoolAut0mater.ProductService.Application.Contracts/SchoolAut0mater.ProductService.Application.Contracts.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.application.contracts": {}
+      }
+    },
+    "SchoolAut0mater.ProductService.Application": {
+      "type": "dotnet-project",
+      "path": "src/SchoolAut0mater.ProductService.Application/SchoolAut0mater.ProductService.Application.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.application": {}
+      },
+      "contents": {
+        "applicationServices": {
+          "SchoolAut0mater.ProductService.ProductAppService": {}
+        }
+      }
+    },
+    "SchoolAut0mater.ProductService.EntityFrameworkCore": {
+      "type": "dotnet-project",
+      "path": "src/SchoolAut0mater.ProductService.EntityFrameworkCore/SchoolAut0mater.ProductService.EntityFrameworkCore.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.ef": {}
+      },
+      "contents": {
+        "efDbContexts": {
+          "SchoolAut0mater.ProductService.EntityFrameworkCore.ProductServiceDbContext": {
+            "entities": {
+              "SchoolAut0mater.ProductService.Products.Product": {
+                "package": "SchoolAut0mater.ProductService.Domain",
+                "dbSetPropertyOnDbContext": "Products",
+                "databaseTable": "Products" 
+              }
+            }
+          }
+        }
+      }
+    },
+    "SchoolAut0mater.ProductService.HttpApi": {
+      "type": "dotnet-project",
+      "path": "src/SchoolAut0mater.ProductService.HttpApi/SchoolAut0mater.ProductService.HttpApi.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.http-api": {}
+      },
+      "contents": {
+        "controllers": {
+          "SchoolAut0mater.ProductService.Products.ProductController": {},
+          "SchoolAut0mater.ProductService.Products.ProductPublicController": {}
+        }
+      }
+    },
+    "SchoolAut0mater.ProductService.HttpApi.Client": {
+      "type": "dotnet-project",
+      "path": "src/SchoolAut0mater.ProductService.HttpApi.Client/SchoolAut0mater.ProductService.HttpApi.Client.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.http-api-client": {}
+      }
+    },
+    "SchoolAut0mater.ProductService.Web": {
+      "type": "dotnet-project",
+      "path": "src/SchoolAut0mater.ProductService.Web/SchoolAut0mater.ProductService.Web.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.ui.mvc": {}
+      },
+      "contents": {
+        "mvcPages": {
+          "SchoolAut0mater.ProductService.Web.Pages.Products.Index.cshtml": {},
+          "SchoolAut0mater.ProductService.Web.Pages.Products.CreateModal.cshtml": {},
+          "SchoolAut0mater.ProductService.Web.Pages.Products.EditModal.cshtml": {}
+        }
+      }
+    },
+    "SchoolAut0mater.ProductService.Blazor": {
+      "type": "dotnet-project",
+      "path": "src/SchoolAut0mater.ProductService.Blazor/SchoolAut0mater.ProductService.Blazor.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.ui.blazor": {}
+      }
+    },
+    "SchoolAut0mater.ProductService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "src/SchoolAut0mater.ProductService.HttpApi.Host/SchoolAut0mater.ProductService.HttpApi.Host.csproj",
+      "folder": "src",
+      "includes": {
+        "host.http-api": {}
+      }
+    },
+    "SchoolAut0mater.ProductService.TestBase": {
+      "type": "dotnet-project",
+      "path": "test/SchoolAut0mater.ProductService.TestBase/SchoolAut0mater.ProductService.TestBase.csproj",
+      "folder": "test",
+      "includes": {
+        "lib.test": {}
+      }
+    },
+    "SchoolAut0mater.ProductService.Domain.Tests": {
+      "type": "dotnet-project",
+      "path": "test/SchoolAut0mater.ProductService.Domain.Tests/SchoolAut0mater.ProductService.Domain.Tests.csproj",
+      "folder": "test",
+      "includes": {
+        "lib.test": {}
+      }
+    },
+    "SchoolAut0mater.ProductService.EntityFrameworkCore.Tests": {
+      "type": "dotnet-project",
+      "path": "test/SchoolAut0mater.ProductService.EntityFrameworkCore.Tests/SchoolAut0mater.ProductService.EntityFrameworkCore.Tests.csproj",
+      "folder": "test",
+      "includes": {
+        "lib.test": {}
+      }
+    },
+    "SchoolAut0mater.ProductService.Application.Tests": {
+      "type": "dotnet-project",
+      "path": "test/SchoolAut0mater.ProductService.Application.Tests/SchoolAut0mater.ProductService.Application.Tests.csproj",
+      "folder": "test",
+      "includes": {
+        "lib.test": {}
+      }
+    }
+  }
+}

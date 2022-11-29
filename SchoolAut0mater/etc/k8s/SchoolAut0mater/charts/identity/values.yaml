@@ -1,0 +1,45 @@
+config:
+  selfUrl: # https://schoolaut0mater-st-identity
+  corsOrigins: # https://schoolaut0mater-st-gateway-web,https://schoolaut0mater-st-gateway-public-web
+  connectionStrings:
+    identityService: #
+    administrationService: #
+    saasService: #
+  authServer:
+    authority: # http://schoolaut0mater-st-authserver
+    requireHttpsMetadata: # "false"
+    swaggerClientId: WebGateway_Swagger
+  dotnetEnv: Staging
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+
+# Seeded applications and resources 
+openIdDict:
+  applications:
+    authServerRootUrl: #
+    angularRootUrl: #
+    webRootUrl: #
+    blazorRootUrl: #
+    blazorServerRootUrl: #
+    publicWebRootUrl: #
+    webGatewayRootUrl: #
+    publicWebGatewayRootUrl: #
+  resources:  
+    accountServiceRootUrl: #
+    administrationServiceRootUrl: #
+    identityServiceRootUrl: #
+    saasServiceRootUrl: #
+    productServiceRootUrl: #
+
+ingress:
+  host: schoolaut0mater-st-identity
+  tlsSecret: schoolaut0mater-tls
+
+image:
+  repository: mycompanyname/schoolaut0mater-service-identity
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}

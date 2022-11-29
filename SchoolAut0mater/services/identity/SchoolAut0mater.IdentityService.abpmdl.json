@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SchoolAut0mater.IdentityService.HttpApi": {
+      "path": "src/SchoolAut0mater.IdentityService.HttpApi/SchoolAut0mater.IdentityService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.IdentityService.Application": {
+      "path": "src/SchoolAut0mater.IdentityService.Application/SchoolAut0mater.IdentityService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.IdentityService.Domain": {
+      "path": "src/SchoolAut0mater.IdentityService.Domain/SchoolAut0mater.IdentityService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.IdentityService.Domain.Shared": {
+      "path": "src/SchoolAut0mater.IdentityService.Domain.Shared/SchoolAut0mater.IdentityService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.IdentityService.EntityFrameworkCore": {
+      "path": "src/SchoolAut0mater.IdentityService.EntityFrameworkCore/SchoolAut0mater.IdentityService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.IdentityService.HttpApi.Client": {
+      "path": "src/SchoolAut0mater.IdentityService.HttpApi.Client/SchoolAut0mater.IdentityService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.IdentityService.Application.Contracts": {
+      "path": "src/SchoolAut0mater.IdentityService.Application.Contracts/SchoolAut0mater.IdentityService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.IdentityService.HttpApi.Host": {
+      "path": "src/SchoolAut0mater.IdentityService.HttpApi.Host/SchoolAut0mater.IdentityService.HttpApi.Host.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.IdentityService.TestBase": {
+      "path": "test/SchoolAut0mater.IdentityService.TestBase/SchoolAut0mater.IdentityService.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.IdentityService.Domain.Tests": {
+      "path": "test/SchoolAut0mater.IdentityService.Domain.Tests/SchoolAut0mater.IdentityService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.IdentityService.EntityFrameworkCore.Tests": {
+      "path": "test/SchoolAut0mater.IdentityService.EntityFrameworkCore.Tests/SchoolAut0mater.IdentityService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.IdentityService.Application.Tests": {
+      "path": "test/SchoolAut0mater.IdentityService.Application.Tests/SchoolAut0mater.IdentityService.Application.Tests.abppkg.json",
+      "folder": "test"
+    }
+  }
+}

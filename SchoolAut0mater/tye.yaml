@@ -1,0 +1,66 @@
+name: SchoolAut0mater
+services:
+- name: auth-server
+  project: apps/auth-server/src/SchoolAut0mater.AuthServer/SchoolAut0mater.AuthServer.csproj
+  bindings:
+    - protocol: https
+      port: 44322
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=e8202f07-66e5-4619-be07-72ba76fde97f
+- name: administration-service
+  project: services/administration/src/SchoolAut0mater.AdministrationService.HttpApi.Host/SchoolAut0mater.AdministrationService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44367
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=e8202f07-66e5-4619-be07-72ba76fde97f
+- name: identity-service
+  project: services/identity/src/SchoolAut0mater.IdentityService.HttpApi.Host/SchoolAut0mater.IdentityService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44388
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=e8202f07-66e5-4619-be07-72ba76fde97f
+- name: saas-service
+  project: services/saas/src/SchoolAut0mater.SaasService.HttpApi.Host/SchoolAut0mater.SaasService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44381
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=e8202f07-66e5-4619-be07-72ba76fde97f
+- name: product-service
+  project: services/product/src/SchoolAut0mater.ProductService.HttpApi.Host/SchoolAut0mater.ProductService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44361
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=e8202f07-66e5-4619-be07-72ba76fde97f
+- name: web-gateway
+  project: gateways/web/src/SchoolAut0mater.WebGateway/SchoolAut0mater.WebGateway.csproj
+  bindings:
+    - protocol: https
+      port: 44325
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=e8202f07-66e5-4619-be07-72ba76fde97f  
+- name: web-public-gateway
+  project: gateways/web-public/src/SchoolAut0mater.PublicWebGateway/SchoolAut0mater.PublicWebGateway.csproj
+  bindings:
+    - protocol: https
+      port: 44353
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=e8202f07-66e5-4619-be07-72ba76fde97f
+- name: public-web
+  project: apps/public-web/src/SchoolAut0mater.PublicWeb/SchoolAut0mater.PublicWeb.csproj
+  bindings:
+    - protocol: https
+      port: 44335
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=e8202f07-66e5-4619-be07-72ba76fde97f

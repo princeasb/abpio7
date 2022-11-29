@@ -1,0 +1,54 @@
+{
+  "folders": {
+    "items": {
+      "apps": {},
+      "gateways": {},
+      "services": {}
+    }
+  },
+  "modules": {
+    "SchoolAut0mater": {
+      "path": "SchoolAut0mater.abpmdl.json"
+    },
+    "SchoolAut0mater.AuthServer": {
+      "path": "apps/auth-server/SchoolAut0mater.AuthServer.abpmdl.json",
+      "folder": "apps"
+    },
+    "SchoolAut0mater.Blazor": {
+      "path": "apps/blazor/SchoolAut0mater.Blazor.abpmdl.json",
+      "folder": "apps"
+    },
+    "SchoolAut0mater.PublicWeb": {
+      "path": "apps/public-web/SchoolAut0mater.PublicWeb.abpmdl.json",
+      "folder": "apps"
+    },
+    "SchoolAut0mater.Web": {
+      "path": "apps/web/SchoolAut0mater.Web.abpmdl.json",
+      "folder": "apps"
+    },
+    "SchoolAut0mater.WebGateway": {
+      "path": "gateways/web/SchoolAut0mater.WebGateway.abpmdl.json",
+      "folder": "gateways"
+    },
+    "SchoolAut0mater.PublicWebGateway": {
+      "path": "gateways/web-public/SchoolAut0mater.PublicWebGateway.abpmdl.json",
+      "folder": "gateways"
+    },
+    "SchoolAut0mater.AdministrationService": {
+      "path": "services/administration/SchoolAut0mater.AdministrationService.abpmdl.json",
+      "folder": "services"
+    },
+    "SchoolAut0mater.IdentityService": {
+      "path": "services/identity/SchoolAut0mater.IdentityService.abpmdl.json",
+      "folder": "services"
+    },
+    "SchoolAut0mater.ProductService": {
+      "path": "services/product/SchoolAut0mater.ProductService.abpmdl.json",
+      "folder": "services"
+    },
+    "SchoolAut0mater.SaasService": {
+      "path": "services/saas/SchoolAut0mater.SaasService.abpmdl.json",
+      "folder": "services"
+    }
+  }
+}

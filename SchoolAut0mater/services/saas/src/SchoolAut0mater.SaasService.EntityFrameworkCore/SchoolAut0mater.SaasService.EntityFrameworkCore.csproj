@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>SchoolAut0mater.SaasService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Saas.EntityFrameworkCore" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Payment.EntityFrameworkCore" Version="7.0.0-rc.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SchoolAut0mater.SaasService.Domain\SchoolAut0mater.SaasService.Domain.csproj" />
+    </ItemGroup>
+
+
+</Project>

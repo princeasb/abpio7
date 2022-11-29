@@ -1,0 +1,13 @@
+{
+  "folders": {
+    "items": {
+      "src": {}
+    }
+  },
+  "packages": {
+    "SchoolAut0mater.WebGateway": {
+      "path": "src/SchoolAut0mater.WebGateway/SchoolAut0mater.WebGateway.abppkg.json",
+      "folder": "src"
+    }
+  }
+}

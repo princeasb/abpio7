@@ -1,0 +1,372 @@
+# auth-server sub-chart override
+authserver:
+  config:
+    selfUrl: https://schoolaut0mater-st-authserver
+    corsOrigins: https://schoolaut0mater-st-gateway-web,https://schoolaut0mater-st-gateway-web-public,https://schoolaut0mater-st-identity,https://schoolaut0mater-st-administration,https://schoolaut0mater-st-saas,https://schoolaut0mater-st-product
+    allowedRedirectUrls: http://schoolaut0mater-st-angular,https://schoolaut0mater-st-angular,http://schoolaut0mater-st-blazor,https://schoolaut0mater-st-blazor
+    identityService:
+      connString: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Identity"
+    administrationService:
+      connString: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Administration"
+    saasService:
+      connString: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Saas"
+    authServer:
+      authority: http://schoolaut0mater-st-authserver
+      requireHttpsMetadata: "false"
+      swaggerClientId: WebGateway_Swagger
+    dotnetEnv: Staging
+    redisHost: schoolaut0mater-st-redis
+    rabbitmqHost: schoolaut0mater-st-rabbitmq
+    elasticsearchUrl: http://schoolaut0mater-st-elasticsearch
+  ingress:
+    host: schoolaut0mater-st-authserver
+  image:
+    repository: mycompanyname/schoolaut0mater-app-authserver
+    tag: latest
+
+# identity-service sub-chart override
+identity:
+  config:
+    selfUrl: https://schoolaut0mater-st-identity
+    corsOrigins: https://schoolaut0mater-st-gateway-web
+    connectionStrings:
+      identityService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Identity"
+      administrationService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Administration"
+      saasService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Saas"
+    authServer:
+      authority: http://schoolaut0mater-st-authserver
+      requireHttpsMetadata: "false"
+    dotnetEnv: Staging
+    redisHost: schoolaut0mater-st-redis
+    rabbitmqHost: schoolaut0mater-st-rabbitmq
+    elasticsearchUrl: http://schoolaut0mater-st-elasticsearch
+  openIdDict: #Seede applications and resources
+    applications:
+      authServerRootUrl: https://schoolaut0mater-st-authserver/
+      angularRootUrl: https://schoolaut0mater-st-angular/
+      webRootUrl: https://schoolaut0mater-st-web/
+      blazorRootUrl: https://schoolaut0mater-st-blazor/
+      blazorServerRootUrl: https://schoolaut0mater-st-blazor-server/
+      publicWebRootUrl: https://schoolaut0mater-st-public-web/
+      webGatewayRootUrl: https://schoolaut0mater-st-gateway-web/
+      publicWebGatewayRootUrl: https://schoolaut0mater-st-gateway-web-public/ 
+    resources:  
+      accountServiceRootUrl: https://schoolaut0mater-st-authserver/
+      administrationServiceRootUrl: https://schoolaut0mater-st-administration/
+      identityServiceRootUrl: https://schoolaut0mater-st-identity/
+      saasServiceRootUrl: https://schoolaut0mater-st-saas/
+      productServiceRootUrl: https://schoolaut0mater-st-product/
+  ingress:
+    host: schoolaut0mater-st-identity
+  image:
+    repository: mycompanyname/schoolaut0mater-service-identity
+    tag: latest
+
+# administration-service sub-chart override
+administration:
+  config:
+    selfUrl: https://schoolaut0mater-st-administration
+    corsOrigins: https://schoolaut0mater-st-gateway-web,https://schoolaut0mater-st-gateway-web-public
+    connectionStrings:
+      administrationService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Administration"
+      saasService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Saas"    
+    authServer:
+      authority: http://schoolaut0mater-st-authserver
+      requireHttpsMetadata: "false"
+      swaggerClientId: WebGateway_Swagger
+    remoteServices:
+      abpIdentityBaseUrl: https://schoolaut0mater-st-identity
+      useCurrentToken: "false"   
+    dotnetEnv: Staging
+    redisHost: schoolaut0mater-st-redis
+    rabbitmqHost: schoolaut0mater-st-rabbitmq
+    elasticsearchUrl: http://schoolaut0mater-st-elasticsearch
+  synchedCommunication: # Used for server-to-server (client-credentials) communication with identityService for user permissions
+    authority: https://schoolaut0mater-st-authserver
+  ingress:
+    host: schoolaut0mater-st-administration
+  image:
+    repository: mycompanyname/schoolaut0mater-service-administration
+    tag: latest
+
+# saas-service sub-chart override
+saas:
+  config:
+    selfUrl: https://schoolaut0mater-st-saas
+    corsOrigins: https://schoolaut0mater-st-gateway-web
+    connectionStrings:
+      administrationService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Administration"
+      saasService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Saas"
+    authServer:
+      authority: http://schoolaut0mater-st-authserver
+      requireHttpsMetadata: "false"
+      swaggerClientId: WebGateway_Swagger
+    dotnetEnv: Staging
+    redisHost: schoolaut0mater-st-redis
+    rabbitmqHost: schoolaut0mater-st-rabbitmq
+    elasticsearchUrl: http://schoolaut0mater-st-elasticsearch
+  ingress:
+    host: schoolaut0mater-st-saas
+  image:
+    repository: mycompanyname/schoolaut0mater-service-saas
+    tag: latest  
+
+# product-service sub-chart override
+product:
+  config:
+    selfUrl: https://schoolaut0mater-st-product
+    corsOrigins: https://schoolaut0mater-st-gateway-web,https://schoolaut0mater-st-gateway-web-public
+    connectionStrings:
+      productService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Product"
+      administrationService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Administration"
+      saasService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Saas"
+    authServer:
+      authority: http://schoolaut0mater-st-authserver
+      requireHttpsMetadata: "false"
+      swaggerClientId: WebGateway_Swagger
+    dotnetEnv: Staging
+    redisHost: schoolaut0mater-st-redis
+    rabbitmqHost: schoolaut0mater-st-rabbitmq
+    elasticsearchUrl: http://schoolaut0mater-st-elasticsearch
+  ingress:
+    host: schoolaut0mater-st-product
+  image:
+    repository: mycompanyname/schoolaut0mater-service-product
+    tag: latest
+
+# gateway-web sub-chart override
+gateway-web:
+  config:
+    selfUrl: https://schoolaut0mater-st-gateway-web
+    corsOrigins: https://schoolaut0mater-st-angular,https://schoolaut0mater-st-blazor
+    globalConfigurationBaseUrl: http://schoolaut0mater-st-gateway-web
+    authServer:
+      authority: http://schoolaut0mater-st-authserver
+      requireHttpsMetadata: "false"
+      swaggerClientId: WebGateway_Swagger
+    dotnetEnv: Staging
+    redisHost: schoolaut0mater-st-redis
+    rabbitmqHost: schoolaut0mater-st-rabbitmq
+    elasticsearchUrl: http://schoolaut0mater-st-elasticsearch
+  reRoutes:
+    accountService:
+      schema: http
+      host: schoolaut0mater-st-authserver
+      port: 80
+    identityService:
+      schema: # http
+      host: schoolaut0mater-st-identity
+      port: 80
+    administrationService:
+      schema: http
+      host: schoolaut0mater-st-administration
+      port: 80
+    saasService:
+      schema: # http
+      host: schoolaut0mater-st-saas
+      port: 80
+    productService:
+      schema: http
+      host: schoolaut0mater-st-product
+      port: 80  
+  ingress:
+    host: schoolaut0mater-st-gateway-web
+  image:
+    repository: mycompanyname/schoolaut0mater-gateway-web
+    tag: latest
+    pullPolicy: IfNotPresent
+
+# gateway-web-public sub-chart override
+gateway-web-public:
+  config:
+    selfUrl: https://schoolaut0mater-st-gateway-web-public
+    globalConfigurationBaseUrl: http://schoolaut0mater-st-gateway-web-public
+    authServer:
+      authority: http://schoolaut0mater-st-authserver
+      requireHttpsMetadata: "false"
+      swaggerClientId: WebGateway_Swagger
+      swaggerClientSecret: "1q2w3e*"
+    dotnetEnv: Staging 
+    redisHost: schoolaut0mater-st-redis
+    rabbitmqHost: schoolaut0mater-st-rabbitmq
+    elasticsearchUrl: http://schoolaut0mater-st-elasticsearch
+  reRoutes:
+    accountService:
+      schema: http
+      host: schoolaut0mater-st-authserver
+      port: 80
+    saasService:
+      schema: http
+      host: schoolaut0mater-st-saas
+      port: 80
+    administrationService:
+      schema: http
+      host: schoolaut0mater-st-administration
+      port: 80
+    productService:
+      schema: http
+      host: schoolaut0mater-st-product
+      port: 80  
+  ingress:
+    host: schoolaut0mater-st-gateway-web-public
+    tlsSecret: schoolaut0mater-tls
+  image:
+    repository: mycompanyname/schoolaut0mater-gateway-web-public
+    tag: latest
+    pullPolicy: IfNotPresent
+
+kibana:
+  config:
+    elasticsearchUrl: http://schoolaut0mater-st-elasticsearch:9200
+
+# dbmigrator sub-chart override
+dbmigrator:
+  config:
+    connectionStrings:
+      identityService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Identity"
+      administrationService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Administration"
+      saasService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Saas"
+      productService: "Server=schoolaut0mater-st-sqldb,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Product"
+    dotnetEnv: Staging
+  openIdDict:
+    applications:
+      authServerRootUrl: https://schoolaut0mater-st-authserver/
+      angularRootUrl: https://schoolaut0mater-st-angular/
+      webRootUrl: https://schoolaut0mater-st-web/
+      blazorRootUrl: https://schoolaut0mater-st-blazor/
+      blazorServerRootUrl: https://schoolaut0mater-st-blazor-server/
+      publicWebRootUrl: https://schoolaut0mater-st-public-web/
+      webGatewayRootUrl: https://schoolaut0mater-st-gateway-web/
+      publicWebGatewayRootUrl: https://schoolaut0mater-st-gateway-web-public/ 
+    resources:  
+      accountServiceRootUrl: https://schoolaut0mater-st-authserver/
+      administrationServiceRootUrl: https://schoolaut0mater-st-administration/
+      identityServiceRootUrl: https://schoolaut0mater-st-identity/
+      saasServiceRootUrl: https://schoolaut0mater-st-saas/
+      productServiceRootUrl: https://schoolaut0mater-st-product/
+  image:
+    repository: mycompanyname/schoolaut0mater-db-migrator
+    tag: latest
+    pullPolicy: IfNotPresent  
+
+# Public Web application sub-chart override
+publicweb:
+  config:
+    selfUrl: https://schoolaut0mater-st-public-web
+    gatewayUrl: http://schoolaut0mater-st-gateway-web-public
+    authServer:
+      authority: http://schoolaut0mater-st-authserver # should be domain on production (https://auth.mydomain.com)
+      requireHttpsMetadata: "false"
+      isOnK8s: "true"
+      metaAddress: http://schoolaut0mater-st-authserver # should be container on production (http://schoolaut0mater-az-authserver)
+    dotnetEnv: Staging 
+    redisHost: schoolaut0mater-st-redis
+    rabbitmqHost: schoolaut0mater-st-rabbitmq
+    elasticsearchUrl: http://schoolaut0mater-st-elasticsearch
+  ingress:
+    host: schoolaut0mater-st-public-web
+    tlsSecret: schoolaut0mater-tls
+  image:
+    repository: mycompanyname/schoolaut0mater-app-public-web
+    tag: latest
+    pullPolicy: IfNotPresent
+# Angular back-office application sub-chart override
+angular:
+  config:
+    selfUrl: https://schoolaut0mater-st-angular
+    gatewayUrl: https://schoolaut0mater-st-gateway-web
+    authServer:
+      authority: http://schoolaut0mater-st-authserver
+      requireHttpsMetadata: "false"
+      responseType: "code"
+      strictDiscoveryDocumentValidation: false
+      skipIssuerCheck: true
+  ingress:
+    host: schoolaut0mater-st-angular
+    tlsSecret: schoolaut0mater-tls
+  image:
+    repository: mycompanyname/schoolaut0mater-app-angular
+    tag: latest
+    pullPolicy: IfNotPresent
+# Default values for SchoolAut0mater.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

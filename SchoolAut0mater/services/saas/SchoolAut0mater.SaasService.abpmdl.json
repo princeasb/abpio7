@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SchoolAut0mater.SaasService.HttpApi": {
+      "path": "src/SchoolAut0mater.SaasService.HttpApi/SchoolAut0mater.SaasService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.SaasService.Application.Contracts": {
+      "path": "src/SchoolAut0mater.SaasService.Application.Contracts/SchoolAut0mater.SaasService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.SaasService.Application": {
+      "path": "src/SchoolAut0mater.SaasService.Application/SchoolAut0mater.SaasService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.SaasService.Domain.Shared": {
+      "path": "src/SchoolAut0mater.SaasService.Domain.Shared/SchoolAut0mater.SaasService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.SaasService.Domain": {
+      "path": "src/SchoolAut0mater.SaasService.Domain/SchoolAut0mater.SaasService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.SaasService.EntityFrameworkCore": {
+      "path": "src/SchoolAut0mater.SaasService.EntityFrameworkCore/SchoolAut0mater.SaasService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.SaasService.HttpApi.Client": {
+      "path": "src/SchoolAut0mater.SaasService.HttpApi.Client/SchoolAut0mater.SaasService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.SaasService.HttpApi.Host": {
+      "path": "src/SchoolAut0mater.SaasService.HttpApi.Host/SchoolAut0mater.SaasService.HttpApi.Host.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.SaasService.TestBase": {
+      "path": "test/SchoolAut0mater.SaasService.TestBase/SchoolAut0mater.SaasService.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.SaasService.Domain.Tests": {
+      "path": "test/SchoolAut0mater.SaasService.Domain.Tests/SchoolAut0mater.SaasService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.SaasService.EntityFrameworkCore.Tests": {
+      "path": "test/SchoolAut0mater.SaasService.EntityFrameworkCore.Tests/SchoolAut0mater.SaasService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.MicroserviceName.Application.Tests": {
+      "path": "test/SchoolAut0mater.SaasService.Application.Tests/SchoolAut0mater.SaasService.Application.Tests.abppkg.json",
+      "folder": "test"
+    }
+  }
+}

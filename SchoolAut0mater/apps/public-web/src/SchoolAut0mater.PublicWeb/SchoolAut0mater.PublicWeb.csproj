@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="Logs\**" />
+        <Content Remove="Logs\**" />
+        <EmbeddedResource Remove="Logs\**" />
+        <None Remove="Logs\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="Pages\**\*.js">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Pages\**\*.css">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.EventBus.RabbitMQ" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.Http.Client.Web" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.Http.Client.IdentityModel.Web" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.AspNetCore.Authentication.OpenIdConnect" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.AspNetCore.Mvc.Client" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.Account.Pro.Public.HttpApi.Client" Version="7.0.0-rc.2" />
+        <ProjectReference Include="..\..\..\..\shared\SchoolAut0mater.Shared.Hosting.AspNetCore\SchoolAut0mater.Shared.Hosting.AspNetCore.csproj" />
+        <ProjectReference Include="..\..\..\..\shared\SchoolAut0mater.Shared.Localization\SchoolAut0mater.Shared.Localization.csproj" />
+        <ProjectReference Include="..\..\..\..\services\product\src\SchoolAut0mater.ProductService.HttpApi.Client\SchoolAut0mater.ProductService.HttpApi.Client.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonX" Version="2.0.0-*" />
+    </ItemGroup>
+</Project>

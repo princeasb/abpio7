@@ -1,0 +1,13 @@
+{
+  "folders": {
+    "items": {
+      "src": {}
+    }
+  },
+  "packages": {
+    "SchoolAut0mater.AuthServer": {
+      "path": "src/SchoolAut0mater.AuthServer/SchoolAut0mater.AuthServer.abppkg.json",
+      "folder": "src"
+    }
+  }
+}

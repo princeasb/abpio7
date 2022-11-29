@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>SchoolAut0mater.AdministrationService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi.Client" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi.Client" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.SettingManagement.HttpApi.Client" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.AuditLogging.HttpApi.Client" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.LanguageManagement.HttpApi.Client" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.TextTemplateManagement.HttpApi.Client" Version="7.0.0-rc.2" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\SchoolAut0mater.AdministrationService.Application.Contracts\SchoolAut0mater.AdministrationService.Application.Contracts.csproj" />
+    </ItemGroup>
+
+</Project>

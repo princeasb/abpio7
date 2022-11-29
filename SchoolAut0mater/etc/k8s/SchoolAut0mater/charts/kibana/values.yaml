@@ -1,0 +1,8 @@
+config:
+  elasticsearchUrl: http://schoolaut0mater-st-elasticsearch:9200
+
+ingress:
+  host: schoolaut0mater-st-kibana
+  tlsSecret: schoolaut0mater-tls
+
+

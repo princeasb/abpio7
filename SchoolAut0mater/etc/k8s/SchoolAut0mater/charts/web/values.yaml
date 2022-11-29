@@ -1,0 +1,24 @@
+config:
+  selfUrl: # 
+  gatewayUrl: # 
+  authServer:
+    authority: # http://schoolaut0mater-st-authserver
+    requireHttpsMetadata: # "false"
+    isOnK8s: # "true"
+    metaAddress: # http://schoolaut0mater-st-authserver
+  dotnetEnv: # 
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+
+ingress:
+  host: # schoolaut0mater-st-web
+  tlsSecret: schoolaut0mater-tls
+
+image:
+  repository: mycompanyname/schoolaut0mater-app-authserver
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}

@@ -1,0 +1,32 @@
+config:
+  selfUrl: # https://schoolaut0mater-st-administration
+  corsOrigins: # https://schoolaut0mater-st-gateway-web,https://schoolaut0mater-st-gateway-public-web
+  connectionStrings:
+    administrationService: #
+    saasService: #
+  authServer:
+    authority: # http://schoolaut0mater-st-authserver
+    requireHttpsMetadata: "false"
+    swaggerClientId: WebGateway_Swagger
+  remoteServices:
+    abpIdentityBaseUrl: #
+    useCurrentToken: "false"
+  dotnetEnv: #
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+
+synchedCommunication:
+  authority: # https://schoolaut0mater-st-authserver
+
+ingress:
+  host: # schoolaut0mater-st-administration
+  tlsSecret: schoolaut0mater-tls
+
+image:
+  repository: mycompanyname/schoolaut0mater-service-administration
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}

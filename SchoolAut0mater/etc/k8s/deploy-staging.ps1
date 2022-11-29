@@ -1,0 +1,1 @@
+helm upgrade --install schoolaut0mater-st schoolaut0mater --namespace schoolaut0mater --create-namespace

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>SchoolAut0mater.IdentityService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.Identity.Pro.Domain" Version="7.0.0-rc.2" />
+        <PackageReference Include="Volo.Abp.OpenIddict.Domain" Version="7.0.0-rc.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SchoolAut0mater.IdentityService.Domain.Shared\SchoolAut0mater.IdentityService.Domain.Shared.csproj" />
+    </ItemGroup>
+
+</Project>
