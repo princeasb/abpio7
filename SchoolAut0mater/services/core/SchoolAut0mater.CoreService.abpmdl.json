@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "SchoolAut0mater.CoreService.Domain.Shared": {
+      "path": "src/SchoolAut0mater.CoreService.Domain.Shared/SchoolAut0mater.CoreService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.CoreService.Application.Contracts": {
+      "path": "src/SchoolAut0mater.CoreService.Application.Contracts/SchoolAut0mater.CoreService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.CoreService.Domain": {
+      "path": "src/SchoolAut0mater.CoreService.Domain/SchoolAut0mater.CoreService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.CoreService.Application": {
+      "path": "src/SchoolAut0mater.CoreService.Application/SchoolAut0mater.CoreService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.CoreService.EntityFrameworkCore": {
+      "path": "src/SchoolAut0mater.CoreService.EntityFrameworkCore/SchoolAut0mater.CoreService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.CoreService.HttpApi": {
+      "path": "src/SchoolAut0mater.CoreService.HttpApi/SchoolAut0mater.CoreService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.CoreService.HttpApi.Client": {
+      "path": "src/SchoolAut0mater.CoreService.HttpApi.Client/SchoolAut0mater.CoreService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.CoreService.HttpApi.Host": {
+      "path": "src/SchoolAut0mater.CoreService.HttpApi.Host/SchoolAut0mater.CoreService.HttpApi.Host.abppkg.json",
+      "folder": "src"
+    },
+    "SchoolAut0mater.CoreService.Domain.Tests": {
+      "path": "test/SchoolAut0mater.CoreService.Domain.Tests/SchoolAut0mater.CoreService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.CoreService.EntityFrameworkCore.Tests": {
+      "path": "test/SchoolAut0mater.CoreService.EntityFrameworkCore.Tests/SchoolAut0mater.CoreService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.CoreService.TestBase": {
+      "path": "test/SchoolAut0mater.CoreService.TestBase/SchoolAut0mater.CoreService.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "SchoolAut0mater.CoreService.Application.Tests": {
+      "path": "test/SchoolAut0mater.CoreService.Application.Tests/SchoolAut0mater.CoreService.Application.Tests.abppkg.json",
+      "folder": "test"
+    }
+  }
+}
