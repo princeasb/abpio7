@@ -18,10 +18,12 @@
         <ProjectReference Include="..\..\services\identity\src\SchoolAut0mater.IdentityService.Application.Contracts\SchoolAut0mater.IdentityService.Application.Contracts.csproj" />
         <ProjectReference Include="..\..\services\saas\src\SchoolAut0mater.SaasService.EntityFrameworkCore\SchoolAut0mater.SaasService.EntityFrameworkCore.csproj" />
         <ProjectReference Include="..\..\services\saas\src\SchoolAut0mater.SaasService.Application.Contracts\SchoolAut0mater.SaasService.Application.Contracts.csproj" />
-        <ProjectReference Include="..\..\services\product\src\SchoolAut0mater.ProductService.Application.Contracts\SchoolAut0mater.ProductService.Application.Contracts.csproj" />
-        <ProjectReference Include="..\..\services\product\src\SchoolAut0mater.ProductService.EntityFrameworkCore\SchoolAut0mater.ProductService.EntityFrameworkCore.csproj" />
         <ProjectReference Include="..\..\services\core\src\SchoolAut0mater.CoreService.Application.Contracts\SchoolAut0mater.CoreService.Application.Contracts.csproj" />
         <ProjectReference Include="..\..\services\core\src\SchoolAut0mater.CoreService.EntityFrameworkCore\SchoolAut0mater.CoreService.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\services\staff\src\SchoolAut0mater.StaffService.Application.Contracts\SchoolAut0mater.StaffService.Application.Contracts.csproj" />
+        <ProjectReference Include="..\..\services\staff\src\SchoolAut0mater.StaffService.EntityFrameworkCore\SchoolAut0mater.StaffService.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\..\services\product\src\SchoolAut0mater.ProductService.Application.Contracts\SchoolAut0mater.ProductService.Application.Contracts.csproj" />
+        <ProjectReference Include="..\..\services\product\src\SchoolAut0mater.ProductService.EntityFrameworkCore\SchoolAut0mater.ProductService.EntityFrameworkCore.csproj" />
     </ItemGroup>
 
     <ItemGroup>
