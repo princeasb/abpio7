@@ -20,8 +20,8 @@ public static class CoreServiceDbContextModelCreatingExtensions
 
         if (builder.IsHostDatabase())
         {
-            builder.ApplyConfiguration(new EntityTypeConfigurations.MITs.MITCatalogConfigurations());
-            //builder.Ignore<MITs.MITCatalog>();
+            //builder.ApplyConfiguration(new EntityTypeConfigurations.MITs.MITCatalogConfigurations());
+            builder.Ignore<MITs.MITCatalog>();
         }
     }
 }

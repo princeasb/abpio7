@@ -6,9 +6,18 @@ public class CoreServicePermissions
 {
     public const string GroupName = "CoreService";
 
-    public static string[] GetAll()
+    public static string[] GetAll() => ReflectionHelper.GetPublicConstantsRecursively(typeof(CoreServicePermissions));
+
+    public static class Dashboard
     {
-        return ReflectionHelper.GetPublicConstantsRecursively(typeof(CoreServicePermissions));
+        public const string DashboardGroup = GroupName + ".Dashboard";
+        public const string Host = DashboardGroup + ".Host";
+        public const string Tenant = GroupName + ".Tenant";
+    }
+
+    public static class Settings
+    {
+        public const string Default = GroupName + ".SettingManagement";
     }
 
     public static class MITCatalogs

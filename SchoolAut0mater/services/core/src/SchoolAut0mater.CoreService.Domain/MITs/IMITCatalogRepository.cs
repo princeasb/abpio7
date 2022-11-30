@@ -10,10 +10,10 @@ namespace SchoolAut0mater.CoreService.MITs
     {
         Task<List<MITCatalog>> GetListAsync(
             string filterText = null,
-            string code = null,
-            string name = null,
-            List<string> linkedFeatures = null,
+            //string code = null,
+            //string name = null,
             string parentCatalogCode = null,
+            List<string> linkedFeatures = null,
             bool? isFactory = null,
             bool? isActive = null,
             string sorting = null,
@@ -24,10 +24,10 @@ namespace SchoolAut0mater.CoreService.MITs
 
         Task<long> GetCountAsync(
             string filterText = null,
-            string code = null,
-            string name = null,
-            List<string> linkedFeatures = null,
+            //string code = null,
+            //string name = null,
             string parentCatalogCode = null,
+            List<string> linkedFeatures = null,
             bool? isFactory = null,
             bool? isActive = null,
             CancellationToken cancellationToken = default);

@@ -1,17 +1,11 @@
-using System;
-using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq.Dynamic.Core;
 using Microsoft.AspNetCore.Authorization;
-using Volo.Abp;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
-using Volo.Abp.Domain.Repositories;
 using SchoolAut0mater.CoreService.Permissions;
-using SchoolAut0mater.CoreService.MITs;
-using Volo.Abp.ObjectMapping;
 
 namespace SchoolAut0mater.CoreService.MITs
 {
@@ -34,19 +28,19 @@ namespace SchoolAut0mater.CoreService.MITs
         {
             var totalCount = await _mITCatalogRepository.GetCountAsync(
                 input.FilterText, 
-                input.Code, 
-                input.Name, 
-                input.LinkedFeatures, 
+                //input.Code, 
+                //input.Name, 
                 input.ParentCatalogCode, 
+                input.LinkedFeatures, 
                 input.IsFactory, 
                 input.IsActive
             );
             var items = await _mITCatalogRepository.GetListAsync(
                 input.FilterText, 
-                input.Code, 
-                input.Name, 
-                input.LinkedFeatures, 
+                //input.Code, 
+                //input.Name, 
                 input.ParentCatalogCode, 
+                input.LinkedFeatures, 
                 input.IsFactory, 
                 input.IsActive, 
                 input.Sorting, 

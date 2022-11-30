@@ -1,9 +1,7 @@
 using SchoolAut0mater.CoreService.MITs;
-using Volo.Abp.EntityFrameworkCore.Modeling;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
-using System.Reflection.Emit;
 
 namespace SchoolAut0mater.CoreService.EntityFrameworkCore;
 
@@ -21,6 +19,7 @@ public class CoreServiceDbContext : AbpDbContext<CoreServiceDbContext>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
+        builder.Ignore<MITCatalog>();
         builder.ConfigureCoreService();
     }
 }

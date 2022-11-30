@@ -1,6 +1,3 @@
-using System;
-using SchoolAut0mater.CoreService.Shared;
-using Volo.Abp.AutoMapper;
 using SchoolAut0mater.CoreService.MITs;
 using AutoMapper;
 

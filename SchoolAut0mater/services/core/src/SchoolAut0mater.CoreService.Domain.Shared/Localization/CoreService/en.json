@@ -1,10 +1,27 @@
 {
   "Culture": "en",
   "Texts": {
-    "Permission:MITCatalogs": "M I T Catalogs",
+    "CoreService": "Core Service",
+    "Menu:CoreManagement":"Core Management",
+    
+    // Features
+    "Feature:CoreService": "Core Service",
+    "Feature:CoreServiceConcurrentUser": "Core Service Concurrent User",
+    "Feature:CoreServiceConcurrentUserEnable": "Enable Concurrent User Setting Management",
+    "Feature:CoreServiceConcurrentUserDescription": "",
+    "Feature:AllowTenantsToChangeCoreServiceSettings": "Allow Tenants To Change Core Service Settings",
+
+    // Permissions
     "Permission:CoreService": "Core Service",
+    "Permission:MITCatalogs": "MIT Catalogs",
     "Permission:Create": "Create",
     "Permission:Edit": "Edit",
-    "Permission:Delete": "Delete"
+    "Permission:Delete": "Delete",
+    
+    // Settings
+    "Settings:AllowConCurrentUsers": "Allow ConCurrent Users",
+    
+    // General
+    "AllowTenantsToChangeCoreServiceSettings": "Allow Tenants To Change Core Service Settings",
   }
 }

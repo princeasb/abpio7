@@ -33,6 +33,14 @@ public partial class MITCatalogsClientProxy : ClientProxyBase<IMITCatalogsAppSer
         });
     }
 
+    public virtual async Task<MITCatalogDto> GetAsync(string code)
+    {
+        return await RequestAsync<MITCatalogDto>(nameof(GetAsync), new ClientProxyRequestTypeValue
+        {
+            { typeof(string), code }
+        });
+    }
+
     public virtual async Task DeleteAsync(int id)
     {
         await RequestAsync(nameof(DeleteAsync), new ClientProxyRequestTypeValue

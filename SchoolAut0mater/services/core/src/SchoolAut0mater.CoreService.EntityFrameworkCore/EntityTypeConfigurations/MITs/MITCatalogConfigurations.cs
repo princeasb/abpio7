@@ -25,8 +25,8 @@ namespace SchoolAut0mater.CoreService.EntityTypeConfigurations.MITs
                 .HasMaxLength(MITCatalogConsts.LinkedFeaturesMaxLength)
                 .HasDefaultValue<List<string>>(new List<string> { "*" });
             #endregion LinkedFeatures
-            modelBuilder.Property(x => x.IsFactory).HasColumnName(nameof(MITCatalog.IsFactory)).HasDefaultValue(false);
-            modelBuilder.Property(x => x.IsActive).HasColumnName(nameof(MITCatalog.IsActive)).HasDefaultValue(true);
+            modelBuilder.Property(x => x.IsFactory).HasColumnName(nameof(MITCatalog.IsFactory)); //.HasDefaultValue(false);
+            modelBuilder.Property(x => x.IsActive).HasColumnName(nameof(MITCatalog.IsActive)); //.HasDefaultValue(true);
         }
     }
 }
