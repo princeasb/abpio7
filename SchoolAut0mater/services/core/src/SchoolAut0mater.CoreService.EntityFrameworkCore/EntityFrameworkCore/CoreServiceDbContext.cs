@@ -19,7 +19,6 @@ public class CoreServiceDbContext : AbpDbContext<CoreServiceDbContext>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        builder.Ignore<MITCatalog>();
         builder.ConfigureCoreService();
     }
 }

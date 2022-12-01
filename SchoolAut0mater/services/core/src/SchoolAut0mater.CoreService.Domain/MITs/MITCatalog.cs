@@ -27,7 +27,8 @@ namespace SchoolAut0mater.CoreService.MITs
 
         public virtual bool IsFactory { get; set; }
 
-        public virtual bool IsActive { get; set; }
+        [CanBeNull]
+        public virtual bool? IsActive { get; set; }
 
         public string ConcurrencyStamp { get; set; }
 
