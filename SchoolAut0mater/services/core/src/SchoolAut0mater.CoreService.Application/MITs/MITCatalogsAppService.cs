@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 using SchoolAut0mater.CoreService.Permissions;
+using Microsoft.Extensions.Logging;
 
 namespace SchoolAut0mater.CoreService.MITs
 {
@@ -16,33 +17,36 @@ namespace SchoolAut0mater.CoreService.MITs
 
         private readonly IMITCatalogRepository _mITCatalogRepository;
         private readonly MITCatalogManager _mITCatalogManager;
+        private readonly ILogger<MITCatalogsAppService> _logger;
 
-        public MITCatalogsAppService(IMITCatalogRepository mITCatalogRepository, MITCatalogManager mITCatalogManager)
+        public MITCatalogsAppService(
+            IMITCatalogRepository mITCatalogRepository, 
+            MITCatalogManager mITCatalogManager,
+            ILogger<MITCatalogsAppService> logger
+        )
         {
-
             _mITCatalogRepository = mITCatalogRepository;
             _mITCatalogManager = mITCatalogManager;
+            _logger = logger;
+            logger.LogWarning("Initializing MITCatalogsAppService");
         }
 
         public virtual async Task<PagedResultDto<MITCatalogDto>> GetListAsync(GetMITCatalogsInput input)
         {
+            _logger.LogWarning("Calling GetListAsync");
             var totalCount = await _mITCatalogRepository.GetCountAsync(
-                input.FilterText, 
-                //input.Code, 
-                //input.Name, 
-                input.ParentCatalogCode, 
-                input.LinkedFeatures, 
-                input.IsFactory, 
-                input.IsActive
+                input.FilterText
+                // input.ParentCatalogCode, 
+                // input.LinkedFeatures, 
+                // input.IsFactory, 
+                // input.IsActive
             );
             var items = await _mITCatalogRepository.GetListAsync(
                 input.FilterText, 
-                //input.Code, 
-                //input.Name, 
-                input.ParentCatalogCode, 
-                input.LinkedFeatures, 
-                input.IsFactory, 
-                input.IsActive, 
+                // input.ParentCatalogCode, 
+                // input.LinkedFeatures, 
+                // input.IsFactory, 
+                // input.IsActive, 
                 input.Sorting, 
                 input.MaxResultCount, 
                 input.SkipCount

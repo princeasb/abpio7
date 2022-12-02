@@ -89,7 +89,7 @@ public class PowerSchoolServiceHttpApiHostModule : AbpModule
         app.UseAbpSwaggerUI(options =>
         {
             var configuration = context.ServiceProvider.GetRequiredService<IConfiguration>();
-            options.SwaggerEndpoint("/swagger/v1/swagger.json", "PowerSchoolService API");
+            options.SwaggerEndpoint("/swagger/v1/swagger.json", "PowerSchool Service API");
             options.OAuthClientId(configuration["AuthServer:SwaggerClientId"]);
         });
         app.UseAbpSerilogEnrichers();

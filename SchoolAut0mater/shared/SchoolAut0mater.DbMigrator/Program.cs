@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using Serilog.Events;
+using System;
 
 namespace SchoolAut0mater.DbMigrator;
 
@@ -12,7 +13,15 @@ class Program
 {
     async static Task Main(string[] args)
     {
+        var configuration = new ConfigurationBuilder()
+            .SetBasePath(System.IO.Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json")
+            .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"}.json", true)
+            .AddEnvironmentVariables()
+            .Build();
+
         Log.Logger = new LoggerConfiguration()
+            .ReadFrom.Configuration(configuration)    
 #if DEBUG
             .MinimumLevel.Debug()
 #else
@@ -25,6 +34,8 @@ class Program
             .WriteTo.Async(c => c.File("Logs/logs.txt"))
             .WriteTo.Async(c => c.Console())
             .CreateLogger();
+
+        Log.Logger.Error("test");
 
         await CreateHostBuilder(args).RunConsoleAsync();
     }

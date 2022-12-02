@@ -28,7 +28,7 @@ public class Program
             await builder.AddApplicationAsync<CoreServiceHttpApiHostModule>();
             var app = builder.Build();
             await app.InitializeApplicationAsync();
-            await app.RunAsync();            
+            await app.RunAsync();
             return 0;
         }
         catch (Exception ex)
@@ -36,9 +36,6 @@ public class Program
             Log.Fatal(ex, $"{assemblyName} terminated unexpectedly!");
             return 1;
         }
-        finally
-        {
-            Log.CloseAndFlush();
-        }
+        finally { Log.CloseAndFlush(); }
     }
 }

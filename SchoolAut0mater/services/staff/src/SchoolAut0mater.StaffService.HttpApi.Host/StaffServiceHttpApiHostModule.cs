@@ -89,7 +89,7 @@ public class StaffServiceHttpApiHostModule : AbpModule
         app.UseAbpSwaggerUI(options =>
         {
             var configuration = context.ServiceProvider.GetRequiredService<IConfiguration>();
-            options.SwaggerEndpoint("/swagger/v1/swagger.json", "StaffService API");
+            options.SwaggerEndpoint("/swagger/v1/swagger.json", "Staff Service API");
             options.OAuthClientId(configuration["AuthServer:SwaggerClientId"]);
         });
         app.UseAbpSerilogEnrichers();

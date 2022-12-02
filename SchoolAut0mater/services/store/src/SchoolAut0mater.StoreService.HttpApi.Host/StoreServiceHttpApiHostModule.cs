@@ -89,7 +89,7 @@ public class StoreServiceHttpApiHostModule : AbpModule
         app.UseAbpSwaggerUI(options =>
         {
             var configuration = context.ServiceProvider.GetRequiredService<IConfiguration>();
-            options.SwaggerEndpoint("/swagger/v1/swagger.json", "StoreService API");
+            options.SwaggerEndpoint("/swagger/v1/swagger.json", "Store Service API");
             options.OAuthClientId(configuration["AuthServer:SwaggerClientId"]);
         });
         app.UseAbpSerilogEnrichers();

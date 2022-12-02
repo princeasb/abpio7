@@ -133,8 +133,8 @@ public class CoreServiceDataSeeder : ITransientDependency
         string code,
         string name,
         bool isFactory = true,
-        string parentCode = default(string),
-        List<string> features = default(List<string>)
+        List<string> features = default(List<string>),
+        string parentCode = default(string)
     )
     {
         var _catalog = await _mitCatalogRepository.FirstOrDefaultAsync(s => s.Code == code);

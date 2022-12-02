@@ -21,58 +21,53 @@ namespace SchoolAut0mater.CoreService.MITs
 
         public async Task<List<MITCatalog>> GetListAsync(
             string filterText = null,
-            //string code = null,
-            //string name = null,
-            string parentCatalogCode = null,
-            List<string> linkedFeatures = null,
-            bool? isFactory = null,
-            bool? isActive = null,
+            // string parentCatalogCode = null,
+            // List<string> linkedFeatures = null,
+            // bool? isFactory = null,
+            // bool? isActive = null,
             string sorting = null,
             int maxResultCount = int.MaxValue,
             int skipCount = 0,
             CancellationToken cancellationToken = default)
         {
-            var query = ApplyFilter((await GetQueryableAsync()), filterText, parentCatalogCode, linkedFeatures, isFactory, isActive);
+            var query = ApplyFilter((await GetQueryableAsync()), filterText);//, parentCatalogCode, linkedFeatures, isFactory, isActive);
             query = query.OrderBy(string.IsNullOrWhiteSpace(sorting) ? MITCatalogConsts.GetDefaultSorting(false) : sorting);
             return await query.PageBy(skipCount, maxResultCount).ToListAsync(cancellationToken);
         }
 
         public async Task<long> GetCountAsync(
             string filterText = null,
-            //string code = null,
-            //string name = null,
-            string parentCatalogCode = null,
-            List<string> linkedFeatures = null,
-            bool? isFactory = null,
-            bool? isActive = null,
+            // string parentCatalogCode = null,
+            // List<string> linkedFeatures = null,
+            // bool? isFactory = null,
+            // bool? isActive = null,
             CancellationToken cancellationToken = default
         )
         {
-            var query = ApplyFilter((await GetDbSetAsync()), filterText, parentCatalogCode, linkedFeatures, isFactory, isActive);
+            var query = ApplyFilter((await GetDbSetAsync()), filterText);//, parentCatalogCode, linkedFeatures, isFactory, isActive);
             return await query.LongCountAsync(GetCancellationToken(cancellationToken));
         }
 
         protected virtual IQueryable<MITCatalog> ApplyFilter(
             IQueryable<MITCatalog> query,
-            string filterText,
-            //string code = null,
-            //string name = null,
-            string parentCatalogCode = null,
-            List<string> linkedFeatures = null,
-            bool? isFactory = null,
-            bool? isActive = null)
+            string filterText
+        // string parentCatalogCode = null,
+        // List<string> linkedFeatures = null,
+        // bool? isFactory = null,
+        // bool? isActive = null
+        )
         {
             return query
-                    .WhereIf(!string.IsNullOrWhiteSpace(filterText), e => 
-                        e.ParentCatalogCode.Contains(filterText) || 
-                        e.Code.Contains(filterText) || 
-                        e.Name.Contains(filterText) || 
-                        e.LinkedFeatures.Contains(filterText)
-                    )
-                    .WhereIf(!string.IsNullOrWhiteSpace(parentCatalogCode), e => e.ParentCatalogCode.Contains(parentCatalogCode))
-                    // .WhereIf(linkedFeatures!=null&& linkedFeatures.Count>1, e => e.LinkedFeatures.Contains(linkedFeatures))
-                    .WhereIf(isFactory.HasValue, e => e.IsFactory == isFactory)
-                    .WhereIf(isActive.HasValue, e => e.IsActive == isActive);
+                .WhereIf(!string.IsNullOrWhiteSpace(filterText), e =>
+                    e.ParentCatalogCode.Contains(filterText) ||
+                    e.Code.Contains(filterText) ||
+                    e.Name.Contains(filterText)
+                )
+                // .WhereIf(!string.IsNullOrWhiteSpace(parentCatalogCode), e => e.ParentCatalogCode.Contains(parentCatalogCode))
+                // // .WhereIf(linkedFeatures!=null&& linkedFeatures.Count>1, e => e.LinkedFeatures.Contains(linkedFeatures))
+                // .WhereIf(isFactory.HasValue, e => e.IsFactory == isFactory)
+                // .WhereIf(isActive.HasValue, e => e.IsActive == isActive)
+                ;
         }
 
     }

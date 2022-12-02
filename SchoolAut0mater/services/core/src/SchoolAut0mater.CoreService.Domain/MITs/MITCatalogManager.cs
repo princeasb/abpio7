@@ -68,10 +68,10 @@ namespace SchoolAut0mater.CoreService.MITs
 
             var mITCatalog = await _mITCatalogRepository.GetAsync(id);
 
-            mITCatalog.ParentCatalogCode = parentCatalogCode;
             mITCatalog.Code = code;
             mITCatalog.Name = name;
             mITCatalog.LinkedFeatures = linkedFeatures;
+            mITCatalog.ParentCatalogCode = parentCatalogCode;
             mITCatalog.IsFactory = isFactory;
             mITCatalog.IsActive = isActive;
 

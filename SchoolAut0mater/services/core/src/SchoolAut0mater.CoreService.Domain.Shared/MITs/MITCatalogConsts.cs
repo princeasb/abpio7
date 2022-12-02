@@ -4,10 +4,7 @@ namespace SchoolAut0mater.CoreService.MITs
     {
         private const string DefaultSorting = "{0}LinkedFeatures asc,{0}ParentCatalogCode asc,{0}Code asc";
 
-        public static string GetDefaultSorting(bool withEntityName)
-        {
-            return string.Format(DefaultSorting, withEntityName ? "MITCatalog." : string.Empty);
-        }
+        public static string GetDefaultSorting(bool withEntityName) => string.Format(DefaultSorting, withEntityName ? "MITCatalog." : string.Empty);
 
         public const int ParentCatalogCodeMaxLength = 20;
         public const int CodeMinLength = 3;

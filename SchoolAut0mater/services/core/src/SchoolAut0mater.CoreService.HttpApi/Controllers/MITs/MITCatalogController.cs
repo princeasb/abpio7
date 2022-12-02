@@ -2,18 +2,16 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp;
-using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Application.Dtos;
-using SchoolAut0mater.CoreService.MITs;
-using System.Linq;
 
 namespace SchoolAut0mater.CoreService.MITs
 {
-    [RemoteService(Name = "CoreService")]
+    [RemoteService(Name = CoreServiceRemoteServiceConsts.RemoteServiceName)]
     [Area("coreService")]
     [ControllerName("MITCatalog")]
     [Route("api/core-service/mitCatalogs")]
-    public class MITCatalogController : AbpController, IMITCatalogsAppService
+    //public class MITCatalogController : AbpController, IMITCatalogsAppService
+    public class MITCatalogController : CoreServiceController, IMITCatalogsAppService
     {
         private readonly IMITCatalogsAppService _mITCatalogsAppService;
 

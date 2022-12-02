@@ -51,10 +51,10 @@ namespace SchoolAut0mater.CoreService.MITs
             Check.NotNull(name, nameof(name));
             Check.Length(name, nameof(name), MITCatalogConsts.NameMaxLength, MITCatalogConsts.NameMinLength);
             Check.Length(linkedFeatures.ToString(), nameof(linkedFeatures), MITCatalogConsts.LinkedFeaturesMaxLength, MITCatalogConsts.LinkedFeaturesMinLength);
-            ParentCatalogCode = parentCatalogCode;
             Code = code;
             Name = name;
             LinkedFeatures = linkedFeatures;
+            ParentCatalogCode = parentCatalogCode;
             IsFactory = isFactory;
             IsActive = isActive;
         }

@@ -41,9 +41,9 @@ public class CoreServiceHttpApiHostModule : AbpModule
             scopes: new
                 Dictionary<string, string> /* Requested scopes for authorization code request and descriptions for swagger UI only */
                 {
-                    {"CoreService", "CoreService API"}
+                    {"CoreService", "Core Service API"}
                 },
-            apiTitle: "CoreService API"
+            apiTitle: "Core Service API"
         );
         context.Services.AddCors(options =>
         {
@@ -89,7 +89,7 @@ public class CoreServiceHttpApiHostModule : AbpModule
         app.UseAbpSwaggerUI(options =>
         {
             var configuration = context.ServiceProvider.GetRequiredService<IConfiguration>();
-            options.SwaggerEndpoint("/swagger/v1/swagger.json", "CoreService API");
+            options.SwaggerEndpoint("/swagger/v1/swagger.json", "Core Service API");
             options.OAuthClientId(configuration["AuthServer:SwaggerClientId"]);
         });
         app.UseAbpSerilogEnrichers();

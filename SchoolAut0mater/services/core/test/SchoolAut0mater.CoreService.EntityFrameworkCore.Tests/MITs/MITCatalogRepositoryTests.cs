@@ -26,10 +26,11 @@ namespace SchoolAut0mater.CoreService.MITs
             {
                 // Act
                 var result = await _mITCatalogRepository.GetListAsync(
-                    parentCatalogCode: "826afe6f1241435cb893",
-                    linkedFeatures: new List<string> { "*" },
-                    isFactory: true,
-                    isActive: true
+                    filterText: "826afe6f1241435cb893"
+                // parentCatalogCode: "826afe6f1241435cb893",
+                // linkedFeatures: new List<string> { "*" },
+                // isFactory: true,
+                // isActive: true
                 );
 
                 // Assert
@@ -47,10 +48,11 @@ namespace SchoolAut0mater.CoreService.MITs
             {
                 // Act
                 var result = await _mITCatalogRepository.GetCountAsync(
-                    parentCatalogCode: "05cb2101668f4b2a870d",
-                    linkedFeatures: new List<string> { "*" },                    
-                    isFactory: true,
-                    isActive: true
+                    filterText: "826afe6f1241435cb893"
+                // parentCatalogCode: "05cb2101668f4b2a870d",
+                // linkedFeatures: new List<string> { "*" },                    
+                // isFactory: true,
+                // isActive: true
                 );
 
                 // Assert

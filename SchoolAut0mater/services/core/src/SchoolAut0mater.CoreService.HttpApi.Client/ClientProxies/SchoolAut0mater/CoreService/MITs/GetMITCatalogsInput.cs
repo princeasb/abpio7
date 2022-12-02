@@ -14,13 +14,9 @@ public class GetMITCatalogsInput : PagedAndSortedResultRequestDto
 {
     public string FilterText { get; set; }
 
-    public string ParentCatalogCode { get; set; }
-
-    public string Code { get; set; }
-
-    public string Name { get; set; }
-
     public string[] LinkedFeatures { get; set; }
+
+    public string ParentCatalogCode { get; set; }
 
     public bool? IsFactory { get; set; }
 
