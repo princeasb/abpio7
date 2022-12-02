@@ -26,6 +26,8 @@ public class CoreServiceEntityFrameworkCoreModule : AbpModule
              * default repositories only for aggregate roots */
             options.AddDefaultRepositories(includeAllEntities: true);
             options.AddRepository<MITCatalog, MITs.EfCoreMITCatalogRepository>();
+            options.AddRepository<MITItem, MITs.EfCoreMITItemRepository>();
+
         });
 
         Configure<AbpDbContextOptions>(options =>

@@ -2,10 +2,10 @@ using Shouldly;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using SchoolAut0mater.CoreService.MITs;
 using SchoolAut0mater.CoreService.EntityFrameworkCore;
 using Xunit;
 using System.Collections.Generic;
+using SchoolAut0mater.CoreService.MITs.Catalog;
 
 namespace SchoolAut0mater.CoreService.MITs
 {

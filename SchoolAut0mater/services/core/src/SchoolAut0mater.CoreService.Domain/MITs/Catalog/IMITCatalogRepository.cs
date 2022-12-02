@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Volo.Abp.Domain.Repositories;
 
-namespace SchoolAut0mater.CoreService.MITs
+namespace SchoolAut0mater.CoreService.MITs.Catalog
 {
     public interface IMITCatalogRepository : IRepository<MITCatalog, int>
     {

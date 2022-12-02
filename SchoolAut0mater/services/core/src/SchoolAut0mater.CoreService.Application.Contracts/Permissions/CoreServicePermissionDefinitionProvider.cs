@@ -27,6 +27,11 @@ public class CoreServicePermissionDefinitionProvider : PermissionDefinitionProvi
         mITCatalogPermission.AddChild(CoreServicePermissions.MITCatalogs.Create, L("Permission:Create"));
         mITCatalogPermission.AddChild(CoreServicePermissions.MITCatalogs.Edit, L("Permission:Edit"));
         mITCatalogPermission.AddChild(CoreServicePermissions.MITCatalogs.Delete, L("Permission:Delete"));
+
+        var mITItemPermission = coreServiceGroup.AddPermission(CoreServicePermissions.MITItems.Default, L("Permission:MITItems"));
+        mITItemPermission.AddChild(CoreServicePermissions.MITItems.Create, L("Permission:Create"));
+        mITItemPermission.AddChild(CoreServicePermissions.MITItems.Edit, L("Permission:Edit"));
+        mITItemPermission.AddChild(CoreServicePermissions.MITItems.Delete, L("Permission:Delete"));
     }
 
     private static LocalizableString L(string name) => LocalizableString.Create<CoreServiceResource>(name);

@@ -2,26 +2,56 @@
   "Culture": "en",
   "Texts": {
     "CoreService": "Core Service",
-    "Menu:CoreManagement":"Core Management",
-    
-    // Features
+    "Menu:CoreManagement": "Core Management",
     "Feature:CoreService": "Core Service",
     "Feature:CoreServiceConcurrentUser": "Core Service Concurrent User",
     "Feature:CoreServiceConcurrentUserEnable": "Enable Concurrent User Setting Management",
     "Feature:CoreServiceConcurrentUserDescription": "",
     "Feature:AllowTenantsToChangeCoreServiceSettings": "Allow Tenants To Change Core Service Settings",
-
-    // Permissions
     "Permission:CoreService": "Core Service",
     "Permission:MITCatalogs": "MIT Catalogs",
     "Permission:Create": "Create",
     "Permission:Edit": "Edit",
     "Permission:Delete": "Delete",
-    
-    // Settings
     "Settings:AllowConCurrentUsers": "Allow ConCurrent Users",
-    
-    // General
     "AllowTenantsToChangeCoreServiceSettings": "Allow Tenants To Change Core Service Settings",
+    "MITCatalog": "MITCatalog",
+    "Permission:MITItems": "MIT Items",
+    "MITItems": "MIT Items",
+    "NewMITItem": "New MIT Item",
+    "MITItem": "MIT Item",
+    "Menu:MITItems": "MIT Items",
+    "SeeAdvancedFilters": "Advanced filters",
+    "DeleteConfirmationMessage": "Are you sure you want to delete this record?",
+    "AreYouSure": "Are you sure?",
+    "Search": "Search",
+    "Pick": "Pick",
+    "Actions": "Actions",
+    "SuccessfullyDeleted": "Successfully deleted",
+    "ExportToExcel": "Export to Excel",
+    "Code": "Code",
+    "Name": "Name",
+    "DisplayName": "Display Name",
+    "DatabaseValue": "Database Value",
+    "DisplayValue": "Display Value",
+    "SortOrder": "Sort Order",
+    "IsFactory": "Is Factory",
+    "IsActive": "Is Active",
+    "MinCode": "Min Code",
+    "MinName": "Min Name",
+    "MinDisplayName": "Min Display Name",
+    "MinDatabaseValue": "Min Database Value",
+    "MinDisplayValue": "Min Display Value",
+    "MinSortOrder": "Min Sort Order",
+    "MinIsFactory": "Min Is Factory",
+    "MinIsActive": "Min Is Active",
+    "MaxCode": "Max Code",
+    "MaxName": "Max Name",
+    "MaxDisplayName": "Max Display Name",
+    "MaxDatabaseValue": "Max Database Value",
+    "MaxDisplayValue": "Max Display Value",
+    "MaxSortOrder": "Max Sort Order",
+    "MaxIsFactory": "Max Is Factory",
+    "MaxIsActive": "Max Is Active"
   }
 }

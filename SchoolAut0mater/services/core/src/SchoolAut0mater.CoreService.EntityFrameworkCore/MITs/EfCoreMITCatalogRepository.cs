@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Domain.Repositories.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
 using SchoolAut0mater.CoreService.EntityFrameworkCore;
+using SchoolAut0mater.CoreService.MITs.Catalog;
 
 namespace SchoolAut0mater.CoreService.MITs
 {

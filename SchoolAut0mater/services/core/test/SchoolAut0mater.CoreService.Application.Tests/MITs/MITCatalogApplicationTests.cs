@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Volo.Abp.Domain.Repositories;
 using Xunit;
 using System.Collections.Generic;
+using SchoolAut0mater.CoreService.MITs.Catalog;
 
 namespace SchoolAut0mater.CoreService.MITs
 {

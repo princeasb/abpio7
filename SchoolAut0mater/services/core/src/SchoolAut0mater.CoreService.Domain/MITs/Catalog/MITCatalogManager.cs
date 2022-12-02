@@ -8,7 +8,7 @@ using Volo.Abp.Domain.Repositories;
 using Volo.Abp.Domain.Services;
 using Volo.Abp.Data;
 
-namespace SchoolAut0mater.CoreService.MITs
+namespace SchoolAut0mater.CoreService.MITs.Catalog
 {
     public class MITCatalogManager : DomainService
     {
@@ -20,7 +20,7 @@ namespace SchoolAut0mater.CoreService.MITs
         }
 
         public async Task<MITCatalog> CreateAsync(
-            string code, 
+            string code,
             string name,
             [CanBeNull] List<string> linkedFeatures = null,
             [CanBeNull] string parentCatalogCode = null,
@@ -36,11 +36,11 @@ namespace SchoolAut0mater.CoreService.MITs
             Check.Length(linkedFeatures.ToString(), nameof(linkedFeatures), MITCatalogConsts.LinkedFeaturesMaxLength, MITCatalogConsts.LinkedFeaturesMinLength);
 
             var mITCatalog = new MITCatalog(
-                code, 
-                name, 
-                linkedFeatures, 
-                parentCatalogCode, 
-                isFactory, 
+                code,
+                name,
+                linkedFeatures,
+                parentCatalogCode,
+                isFactory,
                 isActive
              );
 

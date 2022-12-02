@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Uow;
-using SchoolAut0mater.CoreService.MITs;
 using System.Collections.Generic;
+using SchoolAut0mater.CoreService.MITs.Catalog;
 
 namespace SchoolAut0mater.CoreService.MITs
 {

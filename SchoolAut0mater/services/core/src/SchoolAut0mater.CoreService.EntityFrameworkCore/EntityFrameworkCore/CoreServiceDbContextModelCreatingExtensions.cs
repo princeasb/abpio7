@@ -1,3 +1,5 @@
+using Volo.Abp.EntityFrameworkCore.Modeling;
+using SchoolAut0mater.CoreService.MITs;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
 
@@ -21,7 +23,7 @@ public static class CoreServiceDbContextModelCreatingExtensions
         if (builder.IsHostDatabase())
         {
             builder.ApplyConfiguration(new EntityTypeConfigurations.MITs.MITCatalogConfigurations());
-            // builder.Ignore<MITs.MITCatalog>();
         }
+        builder.ApplyConfiguration(new EntityTypeConfigurations.MITs.MITItemConfigurations());
     }
 }

@@ -2,7 +2,7 @@ using Volo.Abp.Application.Dtos;
 using System;
 using System.Collections.Generic;
 
-namespace SchoolAut0mater.CoreService.MITs
+namespace SchoolAut0mater.CoreService.MITs.Catalog
 {
     public class GetMITCatalogsInput : PagedAndSortedResultRequestDto
     {

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Domain.Entities;
 
-namespace SchoolAut0mater.CoreService.MITs
+namespace SchoolAut0mater.CoreService.MITs.Catalog
 {
     public class MITCatalogDto : EntityDto<int>, IHasConcurrencyStamp
     {

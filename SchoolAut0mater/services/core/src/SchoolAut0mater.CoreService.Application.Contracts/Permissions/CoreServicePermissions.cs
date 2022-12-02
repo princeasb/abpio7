@@ -27,4 +27,12 @@ public class CoreServicePermissions
         public const string Create = Default + ".Create";
         public const string Delete = Default + ".Delete";
     }
+
+    public static class MITItems
+    {
+        public const string Default = GroupName + ".MITItems";
+        public const string Edit = Default + ".Edit";
+        public const string Create = Default + ".Create";
+        public const string Delete = Default + ".Delete";
+    }
 }

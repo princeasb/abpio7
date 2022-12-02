@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 
-namespace SchoolAut0mater.CoreService.MITs
+namespace SchoolAut0mater.CoreService.MITs.Catalog
 {
     public interface IMITCatalogsAppService : IApplicationService
     {
