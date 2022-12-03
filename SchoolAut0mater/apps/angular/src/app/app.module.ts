@@ -21,6 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { APP_ROUTE_PROVIDER } from './route.provider';
 import { FeatureManagementModule } from '@abp/ng.feature-management';
+import { MITS_MITCATALOG_ROUTE_PROVIDER } from './mits/mitcatalog/providers/mitcatalog-route.provider';
+import { MITS_MITITEM_ROUTE_PROVIDER } from './mits/mititem/providers/mititem-route.provider';
 
 @NgModule({
   declarations: [AppComponent],
@@ -55,7 +57,7 @@ import { FeatureManagementModule } from '@abp/ng.feature-management';
     CommercialUiConfigModule.forRoot(),
     FeatureManagementModule.forRoot(),
   ],
-  providers: [APP_ROUTE_PROVIDER],
+  providers: [APP_ROUTE_PROVIDER, MITS_MITCATALOG_ROUTE_PROVIDER, MITS_MITITEM_ROUTE_PROVIDER],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

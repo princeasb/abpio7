@@ -7,9 +7,9 @@ using Volo.Abp.Http.Client;
 using Volo.Abp.Http.Modeling;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Http.Client.ClientProxying;
+using SchoolAut0mater.CoreService.MITs;
 using Volo.Abp.Content;
 using SchoolAut0mater.CoreService.Shared;
-using SchoolAut0mater.CoreService.MITs.Item;
 
 // ReSharper disable once CheckNamespace
 namespace SchoolAut0mater.CoreService.MITs.ClientProxies;

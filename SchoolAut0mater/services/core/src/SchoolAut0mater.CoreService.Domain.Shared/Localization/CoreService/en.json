@@ -52,6 +52,15 @@
     "MaxDisplayValue": "Max Display Value",
     "MaxSortOrder": "Max Sort Order",
     "MaxIsFactory": "Max Is Factory",
-    "MaxIsActive": "Max Is Active"
+    "MaxIsActive": "Max Is Active",
+    "MITCatalogs": "M I T Catalogs",
+    "NewMITCatalog": "New M I T Catalog",
+    "Menu:MITCatalogs": "M I T Catalogs",
+    "ParentCatalogCode": "Parent Catalog Code",
+    "LinkedFeatures": "Linked Features",
+    "MinParentCatalogCode": "Min Parent Catalog Code",
+    "MinLinkedFeatures": "Min Linked Features",
+    "MaxParentCatalogCode": "Max Parent Catalog Code",
+    "MaxLinkedFeatures": "Max Linked Features"
   }
 }

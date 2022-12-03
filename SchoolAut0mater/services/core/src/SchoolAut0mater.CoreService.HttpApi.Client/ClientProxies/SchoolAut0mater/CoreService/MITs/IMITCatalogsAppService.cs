@@ -14,5 +14,5 @@ public interface IMITCatalogsAppService : IApplicationService
 
     Task<MITCatalogDto> GetAsync(int id);
 
-    Task<MITCatalogDto> GetAsync(string code);
+    // Task<MITCatalogDto> GetAsync(string code);
 }

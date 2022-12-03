@@ -11,11 +11,11 @@
   "IsMultiTenant": true,
   "CheckConcurrency": true,
   "ShouldCreateUserInterface": true,
-  "ShouldCreateBackend": true,
+  "ShouldCreateBackend": false,
   "ShouldExportExcel": true,
   "ShouldAddMigration": false,
   "ShouldUpdateDatabase": false,
-  "CreateTests": true,
+  "CreateTests": false,
   "Properties": [
     {
       "Id": "daea498f-9af1-44a2-99a1-a2643453dd79",

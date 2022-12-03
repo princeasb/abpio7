@@ -1,2 +1,3 @@
+import * as CoreService from './core-service';
 import * as Products from './products';
-export { Products };
+export { CoreService, Products };

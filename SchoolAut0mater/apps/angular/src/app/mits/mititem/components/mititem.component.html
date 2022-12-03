@@ -1,0 +1,500 @@
+<abp-page [title]="'CoreService::MITItems' | abpLocalization">
+  <abp-page-toolbar-container class="col">
+    <div class="text-lg-end pt-2">
+      <button
+        class="btn btn-primary btn-sm mx-2"
+        type="button"
+        [disabled]="isExportToExcelBusy"
+        (click)="exportToExcel()"
+      >
+        {{ 'CoreService::ExportToExcel' | abpLocalization }}
+      </button>
+
+      <button
+        *abpPermission="'CoreService.MITItems.Create'"
+        class="btn btn-primary btn-sm"
+        type="button"
+        (click)="create()"
+      >
+        <i class="fa fa-plus me-1" aria-hidden="true"></i>
+        {{ 'CoreService::NewMITItem' | abpLocalization }}
+      </button>
+    </div>
+  </abp-page-toolbar-container>
+
+  <abp-advanced-entity-filters localizationSourceName="CoreService" [list]="list">
+    <abp-advanced-entity-filters-form>
+      <form #filterForm (keyup.enter)="list.get()">
+        <div class="row">
+          <div class="col-12 col-sm-auto">
+            <div class="mb-3">
+              <label class="form-label" for="codeFilter">
+                {{ 'CoreService::Code' | abpLocalization }}
+              </label>
+
+              <input
+                id="codeFilter"
+                class="form-control"
+                [(ngModel)]="filters.code"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-sm-auto">
+            <div class="mb-3">
+              <label class="form-label" for="nameFilter">
+                {{ 'CoreService::Name' | abpLocalization }}
+              </label>
+
+              <input
+                id="nameFilter"
+                class="form-control"
+                [(ngModel)]="filters.name"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-sm-auto">
+            <div class="mb-3">
+              <label class="form-label" for="displayNameFilter">
+                {{ 'CoreService::DisplayName' | abpLocalization }}
+              </label>
+
+              <input
+                id="displayNameFilter"
+                class="form-control"
+                [(ngModel)]="filters.displayName"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-sm-auto">
+            <div class="mb-3">
+              <label class="form-label" for="databaseValueFilter">
+                {{ 'CoreService::DatabaseValue' | abpLocalization }}
+              </label>
+
+              <input
+                id="databaseValueFilter"
+                class="form-control"
+                [(ngModel)]="filters.databaseValue"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-sm-auto">
+            <div class="mb-3">
+              <label class="form-label" for="displayValueFilter">
+                {{ 'CoreService::DisplayValue' | abpLocalization }}
+              </label>
+
+              <input
+                id="displayValueFilter"
+                class="form-control"
+                [(ngModel)]="filters.displayValue"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-sm-auto">
+            <div class="mb-3">
+              <label class="form-label" for="minSortOrder">
+                {{ 'CoreService::MinSortOrder' | abpLocalization }}
+              </label>
+
+              <input
+                id="minSortOrder"
+                type="number"
+                class="form-control"
+                [(ngModel)]="filters.sortOrderMin"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-auto">
+            <div class="mb-3">
+              <label class="form-label" for="maxSortOrder">
+                {{ 'CoreService::MaxSortOrder' | abpLocalization }}
+              </label>
+
+              <input
+                id="maxSortOrder"
+                type="number"
+                class="form-control"
+                [(ngModel)]="filters.sortOrderMax"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-sm-auto">
+            <div class="mb-3">
+              <label class="form-label" for="isFactoryFilter">
+                {{ 'CoreService::IsFactory' | abpLocalization }}
+              </label>
+
+              <select
+                name="isFactory"
+                id="isFactoryFilter"
+                class="form-select form-control"
+                [(ngModel)]="filters.isFactory"
+                [ngModelOptions]="{ standalone: true }"
+                (change)="list.get()"
+              >
+                <option [ngValue]=""></option>
+                <option [ngValue]="true">{{ 'AbpUi::Yes' | abpLocalization }}</option>
+                <option [ngValue]="false">{{ 'AbpUi::No' | abpLocalization }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 col-sm-auto">
+            <div class="mb-3">
+              <label class="form-label" for="isActiveFilter">
+                {{ 'CoreService::IsActive' | abpLocalization }}
+              </label>
+
+              <select
+                name="isActive"
+                id="isActiveFilter"
+                class="form-select form-control"
+                [(ngModel)]="filters.isActive"
+                [ngModelOptions]="{ standalone: true }"
+                (change)="list.get()"
+              >
+                <option [ngValue]=""></option>
+                <option [ngValue]="true">{{ 'AbpUi::Yes' | abpLocalization }}</option>
+                <option [ngValue]="false">{{ 'AbpUi::No' | abpLocalization }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 col-sm-auto">
+            <div class="mb-3">
+              <label class="form-label" for="mitCatalogIdFilter">
+                {{ 'CoreService::MITCatalog' | abpLocalization }}
+              </label>
+              <abp-lookup-select
+                cid="mitCatalogIdFilter"
+                [getFn]="service.getMITCatalogLookup"
+                [(ngModel)]="filters.mitCatalogId"
+                [ngModelOptions]="{ standalone: true }"
+              ></abp-lookup-select>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-auto align-self-end mb-3">
+            <div class="row">
+              <div class="col-6 col-sm-auto d-grid">
+                <button type="button" class="btn btn-outline-primary" (click)="clearFilters()">
+                  <span>{{ 'AbpUi::Clear' | abpLocalization }}</span>
+                </button>
+              </div>
+              <div class="col-6 col-sm-auto d-grid">
+                <button type="button" class="btn btn-primary" (click)="list.get()">
+                  <span>{{ 'AbpUi::Refresh' | abpLocalization }}</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </abp-advanced-entity-filters-form>
+  </abp-advanced-entity-filters>
+
+  <div class="card">
+    <div class="card-body">
+      <ngx-datatable [rows]="data.items" [count]="data.totalCount" [list]="list" default>
+        <ngx-datatable-column
+          [name]="'AbpUi::Actions' | abpLocalization"
+          [maxWidth]="150"
+          [width]="150"
+          [sortable]="false"
+        >
+          <ng-template let-row="row" let-i="rowIndex" ngx-datatable-cell-template>
+            <div ngbDropdown container="body" class="d-inline-block">
+              <button
+                class="btn btn-primary btn-sm dropdown-toggle"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                ngbDropdownToggle
+              >
+                <i class="fa fa-cog me-1" aria-hidden="true"></i>
+                {{ 'AbpUi::Actions' | abpLocalization }}
+              </button>
+
+              <div ngbDropdownMenu>
+                <button
+                  ngbDropdownItem
+                  *abpPermission="'CoreService.MITItems.Edit'"
+                  (click)="update(row)"
+                >
+                  {{ 'AbpUi::Edit' | abpLocalization }}
+                </button>
+
+                <button
+                  ngbDropdownItem
+                  *abpPermission="'CoreService.MITItems.Delete'"
+                  (click)="delete(row)"
+                >
+                  {{ 'AbpUi::Delete' | abpLocalization }}
+                </button>
+              </div>
+            </div>
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column
+          name="{{ 'CoreService::Code' | abpLocalization }}"
+          prop="mitItem.code"
+        >
+          <ng-template let-row="row" ngx-datatable-cell-template>
+            {{ row.mitItem.code }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column
+          name="{{ 'CoreService::Name' | abpLocalization }}"
+          prop="mitItem.name"
+        >
+          <ng-template let-row="row" ngx-datatable-cell-template>
+            {{ row.mitItem.name }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column
+          name="{{ 'CoreService::DisplayName' | abpLocalization }}"
+          prop="mitItem.displayName"
+        >
+          <ng-template let-row="row" ngx-datatable-cell-template>
+            {{ row.mitItem.displayName }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column
+          name="{{ 'CoreService::DatabaseValue' | abpLocalization }}"
+          prop="mitItem.databaseValue"
+        >
+          <ng-template let-row="row" ngx-datatable-cell-template>
+            {{ row.mitItem.databaseValue }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column
+          name="{{ 'CoreService::DisplayValue' | abpLocalization }}"
+          prop="mitItem.displayValue"
+        >
+          <ng-template let-row="row" ngx-datatable-cell-template>
+            {{ row.mitItem.displayValue }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column
+          name="{{ 'CoreService::SortOrder' | abpLocalization }}"
+          prop="mitItem.sortOrder"
+        >
+          <ng-template let-row="row" ngx-datatable-cell-template>
+            {{ row.mitItem.sortOrder }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column
+          name="{{ 'CoreService::IsFactory' | abpLocalization }}"
+          prop="mitItem.isFactory"
+        >
+          <ng-template let-row="row" ngx-datatable-cell-template>
+            <ng-template
+              [ngIf]="row.mitItem.isFactory"
+              [ngIfThen]="yes"
+              [ngIfElse]="no"
+            ></ng-template>
+
+            <ng-template #yes>
+              <div class="text-success">
+                <span [title]="'AbpUi::Yes' | abpLocalization">
+                  <i class="fa fa-check" aria-hidden="true"></i>
+                </span>
+              </div>
+            </ng-template>
+
+            <ng-template #no>
+              <div class="text-danger">
+                <span [title]="'AbpUi::No' | abpLocalization">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+              </div>
+            </ng-template>
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column
+          name="{{ 'CoreService::IsActive' | abpLocalization }}"
+          prop="mitItem.isActive"
+        >
+          <ng-template let-row="row" ngx-datatable-cell-template>
+            <ng-template
+              [ngIf]="row.mitItem.isActive"
+              [ngIfThen]="yes"
+              [ngIfElse]="no"
+            ></ng-template>
+
+            <ng-template #yes>
+              <div class="text-success">
+                <span [title]="'AbpUi::Yes' | abpLocalization">
+                  <i class="fa fa-check" aria-hidden="true"></i>
+                </span>
+              </div>
+            </ng-template>
+
+            <ng-template #no>
+              <div class="text-danger">
+                <span [title]="'AbpUi::No' | abpLocalization">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+              </div>
+            </ng-template>
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column
+          name="{{ 'CoreService::MITCatalog' | abpLocalization }}"
+          prop="mitCatalog.displayName"
+        >
+          <ng-template let-row="row" ngx-datatable-cell-template>
+            {{ row.mitCatalog?.displayName }}
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</abp-page>
+
+<abp-modal [busy]="isModalBusy" [(visible)]="isModalOpen">
+  <ng-template #abpHeader>
+    <h3>
+      {{ (selected ? 'AbpUi::Edit' : 'CoreService::NewMITItem') | abpLocalization }}
+    </h3>
+  </ng-template>
+
+  <ng-template #abpBody>
+    <form [formGroup]="form" id="mititem" (ngSubmit)="submitForm()" validateOnSubmit>
+      <div class="mt-2 fade-in-top">
+        <div class="mb-3">
+          <label class="form-label" for="mititem-code">
+            {{ 'CoreService::Code' | abpLocalization }} *
+          </label>
+
+          <input
+            id="mititem-code"
+            formControlName="code"
+            class="form-control"
+            maxlength="20"
+            minlength="2"
+            autofocus
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="mititem-name">
+            {{ 'CoreService::Name' | abpLocalization }} *
+          </label>
+
+          <input
+            id="mititem-name"
+            formControlName="name"
+            class="form-control"
+            maxlength="100"
+            minlength="2"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="mititem-display-name">
+            {{ 'CoreService::DisplayName' | abpLocalization }}
+          </label>
+
+          <input id="mititem-display-name" formControlName="displayName" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="mititem-database-value">
+            {{ 'CoreService::DatabaseValue' | abpLocalization }} *
+          </label>
+
+          <input
+            id="mititem-database-value"
+            formControlName="databaseValue"
+            class="form-control"
+            maxlength="50"
+            minlength="1"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="mititem-display-value">
+            {{ 'CoreService::DisplayValue' | abpLocalization }} *
+          </label>
+
+          <input
+            id="mititem-display-value"
+            formControlName="displayValue"
+            class="form-control"
+            maxlength="50"
+            minlength="1"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="mititem-sort-order">
+            {{ 'CoreService::SortOrder' | abpLocalization }}
+          </label>
+
+          <input
+            type="number"
+            id="mititem-sort-order"
+            formControlName="sortOrder"
+            class="form-control"
+          />
+        </div>
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            id="mititem-is-factory"
+            formControlName="isFactory"
+            class="form-check-input"
+          />
+
+          <label for="mititem-is-factory" class="form-check-label">
+            {{ 'CoreService::IsFactory' | abpLocalization }}
+          </label>
+        </div>
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            id="mititem-is-active"
+            formControlName="isActive"
+            class="form-check-input"
+          />
+
+          <label for="mititem-is-active" class="form-check-label">
+            {{ 'CoreService::IsActive' | abpLocalization }}
+          </label>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="mititem-mitcatalog-id">
+            {{ 'CoreService::MITCatalog' | abpLocalization }} *
+          </label>
+
+          <abp-lookup-select
+            cid="mititem-mitcatalog-id"
+            formControlName="mitCatalogId"
+            [getFn]="service.getMITCatalogLookup"
+          ></abp-lookup-select>
+        </div>
+      </div>
+    </form>
+  </ng-template>
+
+  <ng-template #abpFooter>
+    <button type="button" class="btn btn-secondary" abpClose>
+      {{ 'AbpUi::Cancel' | abpLocalization }}
+    </button>
+
+    <abp-button iconClass="fa fa-check" buttonType="submit" formName="mititem">
+      {{ 'AbpUi::Save' | abpLocalization }}
+    </abp-button>
+  </ng-template>
+</abp-modal>

@@ -15,7 +15,7 @@
   "ShouldExportExcel": false,
   "ShouldAddMigration": false,
   "ShouldUpdateDatabase": false,
-  "CreateTests": true,
+  "CreateTests": false,
   "Properties": [
     {
       "Id": "9f150faf-ab95-4fc1-a3e6-91a801b7e72f",
