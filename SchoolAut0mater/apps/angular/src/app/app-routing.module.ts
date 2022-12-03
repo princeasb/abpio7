@@ -51,6 +51,14 @@ const routes: Routes = [
     path: 'products',
     loadChildren: () => import('./product/product.module').then(m => m.ProductModule),
   },
+  {
+    path: 'mitcatalogs',
+    loadChildren: () => import('./mits/mitcatalog/mitcatalog.module').then(m => m.MITCatalogModule),
+  },
+  {
+    path: 'mititems',
+    loadChildren: () => import('./mits/mititem/mititem.module').then(m => m.MITItemModule),
+  },
 ];
 
 @NgModule({

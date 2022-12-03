@@ -1020,6 +1020,502 @@
               "implementFrom": "SchoolAut0mater.CoreService.MITs.Item.IMITItemsAppService"
             }
           }
+        },
+        "SchoolAut0mater.CoreService.MITs.MITCatalogsAppService": {
+          "controllerName": "MITCatalogs",
+          "controllerGroupName": "MITCatalogs",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "SchoolAut0mater.CoreService.MITs.MITCatalogsAppService",
+          "interfaces": [
+            {
+              "type": "Volo.Abp.Auditing.IAuditingEnabled"
+            },
+            {
+              "type": "Volo.Abp.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+            },
+            {
+              "type": "Volo.Abp.Validation.IValidationEnabled"
+            },
+            {
+              "type": "SchoolAut0mater.CoreService.MITs.IMITCatalogsAppService"
+            }
+          ],
+          "actions": {
+            "GetListAsyncByInput": {
+              "uniqueName": "GetListAsyncByInput",
+              "name": "GetListAsync",
+              "allowAnonymous": false,
+              "httpMethod": "GET",
+              "implementFrom": "SchoolAut0mater.CoreService.MITs.IMITCatalogsAppService",
+              "url": "api/core-service/m-iTCatalogs",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SchoolAut0mater.CoreService.MITs.GetMITCatalogsInput, SchoolAut0mater.CoreService.Application.Contracts",
+                  "type": "SchoolAut0mater.CoreService.MITs.GetMITCatalogsInput",
+                  "typeSimple": "SchoolAut0mater.CoreService.MITs.GetMITCatalogsInput",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "FilterText",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Sorting",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "SkipCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "MaxResultCount",
+                  "jsonName": null,
+                  "type": "System.Int32",
+                  "typeSimple": "number",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "ParentCatalogCode",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Code",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "DisplayName",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LinkedFeatures",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "IsFactory",
+                  "jsonName": null,
+                  "type": "System.Boolean",
+                  "typeSimple": "boolean",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "IsActive",
+                  "jsonName": null,
+                  "type": "System.Boolean",
+                  "typeSimple": "boolean",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "Volo.Abp.Application.Dtos.PagedResultDto<SchoolAut0mater.CoreService.MITs.MITCatalogDto>",
+                "typeSimple": "Volo.Abp.Application.Dtos.PagedResultDto<SchoolAut0mater.CoreService.MITs.MITCatalogDto>"
+              }
+            },
+            "GetAsyncById": {
+              "uniqueName": "GetAsyncById",
+              "name": "GetAsync",
+              "allowAnonymous": false,
+              "httpMethod": "GET",
+              "implementFrom": "SchoolAut0mater.CoreService.MITs.IMITCatalogsAppService",
+              "url": "api/core-service/m-iTCatalogs/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SchoolAut0mater.CoreService.MITs.MITCatalogDto",
+                "typeSimple": "SchoolAut0mater.CoreService.MITs.MITCatalogDto"
+              }
+            },
+            "DeleteAsyncById": {
+              "uniqueName": "DeleteAsyncById",
+              "name": "DeleteAsync",
+              "allowAnonymous": false,
+              "httpMethod": "DELETE",
+              "implementFrom": "SchoolAut0mater.CoreService.MITs.IMITCatalogsAppService",
+              "url": "api/core-service/m-iTCatalogs/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              }
+            },
+            "CreateAsyncByInput": {
+              "uniqueName": "CreateAsyncByInput",
+              "name": "CreateAsync",
+              "allowAnonymous": false,
+              "httpMethod": "POST",
+              "implementFrom": "SchoolAut0mater.CoreService.MITs.IMITCatalogsAppService",
+              "url": "api/core-service/m-iTCatalogs",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SchoolAut0mater.CoreService.MITs.MITCatalogCreateDto, SchoolAut0mater.CoreService.Application.Contracts",
+                  "type": "SchoolAut0mater.CoreService.MITs.MITCatalogCreateDto",
+                  "typeSimple": "SchoolAut0mater.CoreService.MITs.MITCatalogCreateDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SchoolAut0mater.CoreService.MITs.MITCatalogCreateDto",
+                  "typeSimple": "SchoolAut0mater.CoreService.MITs.MITCatalogCreateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SchoolAut0mater.CoreService.MITs.MITCatalogDto",
+                "typeSimple": "SchoolAut0mater.CoreService.MITs.MITCatalogDto"
+              }
+            },
+            "UpdateAsyncByIdAndInput": {
+              "uniqueName": "UpdateAsyncByIdAndInput",
+              "name": "UpdateAsync",
+              "allowAnonymous": false,
+              "httpMethod": "PUT",
+              "implementFrom": "SchoolAut0mater.CoreService.MITs.IMITCatalogsAppService",
+              "url": "api/core-service/m-iTCatalogs/{id}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                },
+                {
+                  "name": "input",
+                  "typeAsString": "SchoolAut0mater.CoreService.MITs.MITCatalogUpdateDto, SchoolAut0mater.CoreService.Application.Contracts",
+                  "type": "SchoolAut0mater.CoreService.MITs.MITCatalogUpdateDto",
+                  "typeSimple": "SchoolAut0mater.CoreService.MITs.MITCatalogUpdateDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "input",
+                  "jsonName": null,
+                  "type": "SchoolAut0mater.CoreService.MITs.MITCatalogUpdateDto",
+                  "typeSimple": "SchoolAut0mater.CoreService.MITs.MITCatalogUpdateDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "SchoolAut0mater.CoreService.MITs.MITCatalogDto",
+                "typeSimple": "SchoolAut0mater.CoreService.MITs.MITCatalogDto"
+              }
+            },
+            "GetListAsExcelFileAsyncByInput": {
+              "uniqueName": "GetListAsExcelFileAsyncByInput",
+              "name": "GetListAsExcelFileAsync",
+              "allowAnonymous": true,
+              "httpMethod": "GET",
+              "implementFrom": "SchoolAut0mater.CoreService.MITs.IMITCatalogsAppService",
+              "url": "api/core-service/m-iTCatalogs/as-excel-file",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "input",
+                  "typeAsString": "SchoolAut0mater.CoreService.MITs.MITCatalogExcelDownloadDto, SchoolAut0mater.CoreService.Application.Contracts",
+                  "type": "SchoolAut0mater.CoreService.MITs.MITCatalogExcelDownloadDto",
+                  "typeSimple": "SchoolAut0mater.CoreService.MITs.MITCatalogExcelDownloadDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "input",
+                  "name": "DownloadToken",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "FilterText",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "ParentCatalogCode",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Code",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "Name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "DisplayName",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "LinkedFeatures",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "IsFactory",
+                  "jsonName": null,
+                  "type": "System.Boolean",
+                  "typeSimple": "boolean",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                },
+                {
+                  "nameOnMethod": "input",
+                  "name": "IsActive",
+                  "jsonName": null,
+                  "type": "System.Boolean",
+                  "typeSimple": "boolean",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": "input"
+                }
+              ],
+              "returnValue": {
+                "type": "Volo.Abp.Content.IRemoteStreamContent",
+                "typeSimple": "Volo.Abp.Content.IRemoteStreamContent"
+              }
+            },
+            "GetDownloadTokenAsync": {
+              "uniqueName": "GetDownloadTokenAsync",
+              "name": "GetDownloadTokenAsync",
+              "allowAnonymous": false,
+              "httpMethod": "GET",
+              "implementFrom": "SchoolAut0mater.CoreService.MITs.IMITCatalogsAppService",
+              "url": "api/core-service/m-iTCatalogs/download-token",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "SchoolAut0mater.CoreService.Shared.DownloadTokenResultDto",
+                "typeSimple": "SchoolAut0mater.CoreService.Shared.DownloadTokenResultDto"
+              }
+            }
+          }
         }
       }
     }

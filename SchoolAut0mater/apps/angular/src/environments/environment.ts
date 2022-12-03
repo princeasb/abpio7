@@ -8,7 +8,7 @@ const oAuthConfig = {
   clientId: 'SchoolAut0mater_Angular',
   responseType: 'code',
   scope:
-    'offline_access openid profile email phone AccountService IdentityService AdministrationService SaasService ProductService',
+    'offline_access openid profile email phone AccountService IdentityService AdministrationService SaasService CoreService ProductService',
   requireHttps: true,
 };
 
@@ -32,5 +32,9 @@ export const environment = {
       url: 'https://localhost:44325',
       rootNamespace: 'SchoolAut0mater',
     },
+    CoreService: {
+      url: 'https://localhost:45021',
+      rootNamespace: 'SchoolAut0mater',
+    }
   },
 } as Environment;

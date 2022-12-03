@@ -15,7 +15,16 @@
     "Permission:Delete": "Delete",
     "Settings:AllowConCurrentUsers": "Allow ConCurrent Users",
     "AllowTenantsToChangeCoreServiceSettings": "Allow Tenants To Change Core Service Settings",
-    "MITCatalog": "MITCatalog",
+    "MITCatalog": "MITCatalog",    
+    "MITCatalogs": "MIT Catalogs",
+    "NewMITCatalog": "New MIT Catalog",
+    "Menu:MITCatalogs": "MIT Catalogs",
+    "ParentCatalogCode": "Parent Catalog Code",
+    "LinkedFeatures": "Linked Features",
+    "MinParentCatalogCode": "Min Parent Catalog Code",
+    "MinLinkedFeatures": "Min Linked Features",
+    "MaxParentCatalogCode": "Max Parent Catalog Code",
+    "MaxLinkedFeatures": "Max Linked Features",
     "Permission:MITItems": "MIT Items",
     "MITItems": "MIT Items",
     "NewMITItem": "New MIT Item",
@@ -52,6 +61,6 @@
     "MaxDisplayValue": "Max Display Value",
     "MaxSortOrder": "Max Sort Order",
     "MaxIsFactory": "Max Is Factory",
-    "MaxIsActive": "Max Is Active"
+    "MaxIsActive": "Max Is Active",
   }
 }
