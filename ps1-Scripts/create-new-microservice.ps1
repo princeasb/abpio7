@@ -39,11 +39,11 @@ if ($decision -eq 0) { Write-Host 'confirmed'; }
 else { Write-Host 'cancelled'; return; }
 
 
-$connectionString = "Server=localhost,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Core;MultipleActiveResultSets=true;TrustServerCertificate=True"
+# $connectionString = "Server=localhost,5434;User Id=sa;password=P@ssw0rd00;Database=SchoolAut0mater_Core;MultipleActiveResultSets=true;TrustServerCertificate=True"
 # if (Test-Path -PathType Container "$newServiceLocation") { Write-Error 'MicroService already exist!!!' -ErrorAction Stop; }
-# # else { abp new $newServiceName -t microservice-service-pro --connection-string $connectionString --preview }
-# else { abp new $newServiceName -t microservice-service-pro --preview }
-if ( -Not (Test-Path -PathType Container "$newServiceLocation") ) { abp new $newServiceName -t microservice-service-pro --preview; }
+# # else { abp new $newServiceName -t microservice-pro -u angular --connection-string $connectionString --preview }
+# else { abp new $newServiceName -t microservice-pro -u angular --preview }
+if ( -Not (Test-Path -PathType Container "$newServiceLocation") ) { abp new $newServiceName -t microservice-pro -u angular --preview; }
 
 $projectFolder | Join-Path -ChildPath $newServiceLocation | Set-Location
 Write-Host "Initial Building of $newServiceName service"; Start-Sleep -Seconds 3;
